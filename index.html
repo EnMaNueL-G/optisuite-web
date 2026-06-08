@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="OptiSuite — Herramientas de optimización y seguridad para Windows y Android. Gratuitas, sin anuncios, código abierto.">
-  <meta property="og:title" content="OptiSuite — Herramientas de optimización y seguridad gratuitas">
-  <meta property="og:description" content="Suite de herramientas gratuitas y de código abierto para Windows y Android. Sin anuncios, sin telemetría, sin intermediarios.">
+  <meta name="description" content="OptiSuite â€” Herramientas de optimizaciÃ³n y seguridad para Windows y Android. Gratuitas, sin anuncios, cÃ³digo abierto.">
+  <meta property="og:title" content="OptiSuite â€” Herramientas de optimizaciÃ³n y seguridad gratuitas">
+  <meta property="og:description" content="Suite de herramientas gratuitas y de cÃ³digo abierto para Windows y Android. Sin anuncios, sin telemetrÃ­a, sin intermediarios.">
   <meta property="og:url" content="https://optisuite.app">
-  <title>OptiSuite — Herramientas de optimización y seguridad gratuitas</title>
+  <title>OptiSuite â€” Herramientas de optimizaciÃ³n y seguridad gratuitas</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,27 +15,27 @@
   <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- Favicon inline SVG -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%235B8DEF'/><text x='16' y='22' text-anchor='middle' font-size='18' fill='white'>⚡</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%235B8DEF'/><text x='16' y='22' text-anchor='middle' font-size='18' fill='white'>âš¡</text></svg>">
 </head>
 <body>
 
 <!-- Network canvas background -->
 <canvas id="networkCanvas" aria-hidden="true"></canvas>
 
-<!-- ══════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      NAVIGATION
-═══════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <nav id="nav">
   <div class="nav-inner">
     <a href="/" class="nav-logo" data-page="home" onclick="navigate('home'); return false;">
-      <div class="logo-icon">⚡</div>
+      <div class="logo-icon">âš¡</div>
       OptiSuite
     </a>
 
     <div class="nav-links">
       <a class="nav-link" data-page="home"       href="#home">Inicio</a>
       <a class="nav-link" data-page="tools"      href="#tools">Herramientas</a>
-      <a class="nav-link" data-page="categories" href="#categories">Categorías</a>
+      <a class="nav-link" data-page="categories" href="#categories">CategorÃ­as</a>
       <a class="nav-link" data-page="windows"    href="#windows">Windows</a>
       <a class="nav-link" data-page="android"    href="#android">Android</a>
       <a class="nav-link" data-page="updates"    href="#updates">Actualizaciones</a>
@@ -48,7 +48,7 @@
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 5.8c1.02 0 2.04.14 3 .4 2.28-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
         GitHub
       </a>
-      <button class="hamburger" id="hamburger" aria-label="Menú">
+      <button class="hamburger" id="hamburger" aria-label="MenÃº">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -59,20 +59,20 @@
 <div class="mobile-menu" id="mobileMenu">
   <a class="nav-link" data-page="home"       href="#home">Inicio</a>
   <a class="nav-link" data-page="tools"      href="#tools">Herramientas</a>
-  <a class="nav-link" data-page="categories" href="#categories">Categorías</a>
+  <a class="nav-link" data-page="categories" href="#categories">CategorÃ­as</a>
   <a class="nav-link" data-page="windows"    href="#windows">Windows</a>
   <a class="nav-link" data-page="android"    href="#android">Android</a>
   <a class="nav-link" data-page="updates"    href="#updates">Actualizaciones</a>
   <a class="nav-link" data-page="community"  href="#community">Comunidad</a>
   <a class="nav-link" data-page="about"      href="#about">Sobre</a>
   <div style="margin-top:16px; padding-top:16px; border-top:1px solid var(--border);">
-    <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G" target="_blank">GitHub ↗</a>
+    <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G" target="_blank">GitHub â†—</a>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      PAGE: HOME
-═══════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <main id="page-home" class="page">
 
   <!-- Hero -->
@@ -83,15 +83,15 @@
 
         <!-- Left -->
         <div>
-          <div class="hero-eyebrow">Código 100% abierto</div>
+          <div class="hero-eyebrow">CÃ³digo 100% abierto</div>
           <h1 class="hero-title">
             Herramientas que<br>
             <span class="grad">respetan tu sistema</span>
           </h1>
           <p class="hero-sub">
-            Optimización y seguridad para Windows y Android.
-            Sin publicidad, sin telemetría, sin intermediarios.
-            Todo el código es público y auditable.
+            OptimizaciÃ³n y seguridad para Windows y Android.
+            Sin publicidad, sin telemetrÃ­a, sin intermediarios.
+            Todo el cÃ³digo es pÃºblico y auditable.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" data-page="tools" href="#tools">
@@ -123,37 +123,37 @@
           </div>
         </div>
 
-        <!-- Right — floating cards -->
+        <!-- Right â€” floating cards -->
         <div class="hero-visual">
           <div class="hero-card">
-            <div class="card-icon win">🖥️</div>
+            <div class="card-icon win">ðŸ–¥ï¸</div>
             <div class="card-meta">
               <div class="card-name">WinOptimizer</div>
-              <div class="card-desc">Monitor RAM · CPU · Red · Inicio de Windows</div>
+              <div class="card-desc">Monitor RAM Â· CPU Â· Red Â· Inicio de Windows</div>
             </div>
             <span class="card-ver">v2.3.1</span>
           </div>
           <div class="hero-card">
-            <div class="card-icon win">🔒</div>
+            <div class="card-icon win">ðŸ”’</div>
             <div class="card-meta">
               <div class="card-name">SecuritySuite</div>
-              <div class="card-desc">Telemetría · Privacidad · Firewall</div>
+              <div class="card-desc">TelemetrÃ­a Â· Privacidad Â· Firewall</div>
             </div>
             <span class="card-ver">v1.0.0</span>
           </div>
           <div class="hero-card">
-            <div class="card-icon droid">📱</div>
+            <div class="card-icon droid">ðŸ“±</div>
             <div class="card-meta">
               <div class="card-name">PhoneOptimizer</div>
-              <div class="card-desc">RAM · Batería · Almacenamiento</div>
+              <div class="card-desc">RAM Â· BaterÃ­a Â· Almacenamiento</div>
             </div>
             <span class="card-ver">Activo</span>
           </div>
           <div class="hero-card">
-            <div class="card-icon droid">📡</div>
+            <div class="card-icon droid">ðŸ“¡</div>
             <div class="card-meta">
               <div class="card-name">NetworkGuard</div>
-              <div class="card-desc">Monitor de tráfico por app en tiempo real</div>
+              <div class="card-desc">Monitor de trÃ¡fico por app en tiempo real</div>
             </div>
             <span class="card-ver">v1.0.0</span>
           </div>
@@ -171,15 +171,15 @@
         <div class="tool-card win fade-up fade-up-1">
           <div class="card-top">
             <div class="card-title-block">
-              <div class="tool-icon win">🖥️</div>
+              <div class="tool-icon win">ðŸ–¥ï¸</div>
               <div>
                 <h3>WinOptimizer</h3>
-                <div class="version">v2.3.1 · Windows</div>
+                <div class="version">v2.3.1 Â· Windows</div>
               </div>
             </div>
             <span class="badge badge-win">Windows</span>
           </div>
-          <p>Monitor de rendimiento completo con gestor de inicio integrado. Libera RAM, limpia temporales, controla qué arranca con Windows.</p>
+          <p>Monitor de rendimiento completo con gestor de inicio integrado. Libera RAM, limpia temporales, controla quÃ© arranca con Windows.</p>
           <a class="download-btn win" href="https://github.com/EnMaNueL-G/WinOptimizer/releases/latest" target="_blank" rel="noopener">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             Descargar
@@ -189,15 +189,15 @@
         <div class="tool-card win fade-up fade-up-2">
           <div class="card-top">
             <div class="card-title-block">
-              <div class="tool-icon win">🔒</div>
+              <div class="tool-icon win">ðŸ”’</div>
               <div>
                 <h3>SecuritySuite</h3>
-                <div class="version">v1.0.0 · Windows</div>
+                <div class="version">v1.0.0 Â· Windows</div>
               </div>
             </div>
             <span class="badge badge-new">Nuevo</span>
           </div>
-          <p>Desactiva la telemetría de Microsoft, audita el inicio de Windows, limpia rastros digitales y gestiona el Firewall.</p>
+          <p>Desactiva la telemetrÃ­a de Microsoft, audita el inicio de Windows, limpia rastros digitales y gestiona el Firewall.</p>
           <a class="download-btn win" href="https://github.com/EnMaNueL-G/SecuritySuite/releases/latest" target="_blank" rel="noopener">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             Descargar
@@ -207,15 +207,15 @@
         <div class="tool-card droid fade-up fade-up-3">
           <div class="card-top">
             <div class="card-title-block">
-              <div class="tool-icon droid">📡</div>
+              <div class="tool-icon droid">ðŸ“¡</div>
               <div>
                 <h3>NetworkGuard</h3>
-                <div class="version">v1.0.0 · Android</div>
+                <div class="version">v1.0.0 Â· Android</div>
               </div>
             </div>
             <span class="badge badge-android">Android</span>
           </div>
-          <p>Monitor de tráfico de red por aplicación en tiempo real. Sin root, sin permisos especiales. Android 8+.</p>
+          <p>Monitor de trÃ¡fico de red por aplicaciÃ³n en tiempo real. Sin root, sin permisos especiales. Android 8+.</p>
           <a class="download-btn droid" href="https://github.com/EnMaNueL-G/NetworkGuard/releases/latest" target="_blank" rel="noopener">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             Descargar APK
@@ -225,15 +225,15 @@
         <div class="tool-card droid fade-up fade-up-4">
           <div class="card-top">
             <div class="card-title-block">
-              <div class="tool-icon droid">🔒</div>
+              <div class="tool-icon droid">ðŸ”’</div>
               <div>
                 <h3>AndroidSecurity</h3>
-                <div class="version">v1.1.0 · Android</div>
+                <div class="version">v1.1.0 Â· Android</div>
               </div>
             </div>
             <span class="badge badge-new">Nuevo</span>
           </div>
-          <p>5 pestañas: permisos, detector de espías, guard en tiempo real, anomalías del dispositivo y huella digital. Sin root, sin internet, 100% local.</p>
+          <p>5 pestaÃ±as: permisos, detector de espÃ­as, guard en tiempo real, anomalÃ­as del dispositivo y huella digital. Sin root, sin internet, 100% local.</p>
           <a class="download-btn droid" href="https://github.com/EnMaNueL-G/AndroidSecurity/releases/download/v1.1.0/AndroidSecurity-v1.1.0.apk" target="_blank" rel="noopener">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             Descargar APK
@@ -248,24 +248,24 @@
     <div class="container">
       <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap:32px; text-align:center;">
         <div>
-          <div style="font-size:1.6rem; margin-bottom:10px;">🔓</div>
-          <div style="font-weight:600; font-size:0.95rem; margin-bottom:6px;">Código abierto total</div>
+          <div style="font-size:1.6rem; margin-bottom:10px;">ðŸ”“</div>
+          <div style="font-weight:600; font-size:0.95rem; margin-bottom:6px;">CÃ³digo abierto total</div>
           <p style="font-size:0.82rem;">Cualquier persona puede revisar, auditar o contribuir libremente.</p>
         </div>
         <div>
-          <div style="font-size:1.6rem; margin-bottom:10px;">📦</div>
+          <div style="font-size:1.6rem; margin-bottom:10px;">ðŸ“¦</div>
           <div style="font-weight:600; font-size:0.95rem; margin-bottom:6px;">Sin instaladores</div>
           <p style="font-size:0.82rem;">Ejecutables directos (.exe) o APKs. Descarga y usa.</p>
         </div>
         <div>
-          <div style="font-size:1.6rem; margin-bottom:10px;">🚫</div>
-          <div style="font-weight:600; font-size:0.95rem; margin-bottom:6px;">Sin telemetría</div>
-          <p style="font-size:0.82rem;">Ninguna herramienta recopila ni envía datos de usuario.</p>
+          <div style="font-size:1.6rem; margin-bottom:10px;">ðŸš«</div>
+          <div style="font-weight:600; font-size:0.95rem; margin-bottom:6px;">Sin telemetrÃ­a</div>
+          <p style="font-size:0.82rem;">Ninguna herramienta recopila ni envÃ­a datos de usuario.</p>
         </div>
         <div>
-          <div style="font-size:1.6rem; margin-bottom:10px;">💰</div>
+          <div style="font-size:1.6rem; margin-bottom:10px;">ðŸ’°</div>
           <div style="font-weight:600; font-size:0.95rem; margin-bottom:6px;">Siempre gratis</div>
-          <p style="font-size:0.82rem;">Sin versión de pago. Todas las funciones disponibles para todos.</p>
+          <p style="font-size:0.82rem;">Sin versiÃ³n de pago. Todas las funciones disponibles para todos.</p>
         </div>
       </div>
     </div>
@@ -276,10 +276,10 @@
     <div class="container">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; flex-wrap:wrap; gap:12px;">
         <div>
-          <div class="section-tag">Última actualización</div>
+          <div class="section-tag">Ãšltima actualizaciÃ³n</div>
           <h2 style="margin-top:6px;">WinOptimizer v2.3.1</h2>
         </div>
-        <a class="btn btn-ghost btn-sm" data-page="updates" href="#updates">Ver todas →</a>
+        <a class="btn btn-ghost btn-sm" data-page="updates" href="#updates">Ver todas â†’</a>
       </div>
       <div style="background:var(--bg-surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:24px;">
         <div style="display:flex; gap:12px; align-items:center; margin-bottom:16px;">
@@ -287,22 +287,22 @@
           <span class="update-type type-fix">Fix</span>
           <span class="update-date">Junio 2026</span>
         </div>
-        <p style="font-size:0.875rem;">Corregido error "No se puede llamar a un método en una expresión con valor NULL" al iniciar. La variable <code style="background:var(--bg-raised);padding:1px 5px;border-radius:4px;font-size:0.8rem;">$stTimer</code> fue movida al scope de script para garantizar acceso correcto desde el handler asíncrono del DispatcherTimer.</p>
+        <p style="font-size:0.875rem;">Corregido error "No se puede llamar a un mÃ©todo en una expresiÃ³n con valor NULL" al iniciar. La variable <code style="background:var(--bg-raised);padding:1px 5px;border-radius:4px;font-size:0.8rem;">$stTimer</code> fue movida al scope de script para garantizar acceso correcto desde el handler asÃ­ncrono del DispatcherTimer.</p>
       </div>
     </div>
   </section>
 
 </main>
 
-<!-- ══════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      PAGE: TOOLS
-═══════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <main id="page-tools" class="page">
   <div class="container">
     <div class="platform-hero">
       <div class="section-tag">Todas las herramientas</div>
       <h1>Herramientas disponibles</h1>
-      <p>7 herramientas para Windows y Android. Gratuitas, sin anuncios, código abierto.</p>
+      <p>7 herramientas para Windows y Android. Gratuitas, sin anuncios, cÃ³digo abierto.</p>
     </div>
 
     <div class="filter-tabs">
@@ -317,25 +317,25 @@
       <div class="tool-card win" data-platform="windows" data-repo="WinOptimizer">
         <div class="card-top">
           <div class="card-title-block">
-            <div class="tool-icon win">🖥️</div>
+            <div class="tool-icon win">ðŸ–¥ï¸</div>
             <div><h3>WinOptimizer</h3><div class="version">v2.3.1</div></div>
           </div>
           <span class="badge badge-win">Windows</span>
         </div>
-        <p>Monitor de rendimiento completo. Muestra RAM física, virtual, caché, CPU, disco y red en tiempo real. Gestor de inicio de Windows integrado.</p>
+        <p>Monitor de rendimiento completo. Muestra RAM fÃ­sica, virtual, cachÃ©, CPU, disco y red en tiempo real. Gestor de inicio de Windows integrado.</p>
         <div class="features-list">
           <div class="feature-item"><span class="feature-dot"></span>Monitor RAM, CPU, disco y red en tiempo real</div>
           <div class="feature-item"><span class="feature-dot"></span>Gestor de inicio de Windows con recomendaciones</div>
-          <div class="feature-item"><span class="feature-dot"></span>Top 5 procesos por uso de RAM con opción Kill</div>
-          <div class="feature-item"><span class="feature-dot"></span>Historial gráfico de 2 minutos</div>
-          <div class="feature-item"><span class="feature-dot"></span>Bandeja del sistema + auto-optimización programada</div>
+          <div class="feature-item"><span class="feature-dot"></span>Top 5 procesos por uso de RAM con opciÃ³n Kill</div>
+          <div class="feature-item"><span class="feature-dot"></span>Historial grÃ¡fico de 2 minutos</div>
+          <div class="feature-item"><span class="feature-dot"></span>Bandeja del sistema + auto-optimizaciÃ³n programada</div>
         </div>
         <div class="card-footer">
           <a class="download-btn win" href="https://github.com/EnMaNueL-G/WinOptimizer/releases/latest" target="_blank" rel="noopener">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             Descargar .exe
           </a>
-          <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G/WinOptimizer" target="_blank" rel="noopener">Código fuente</a>
+          <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G/WinOptimizer" target="_blank" rel="noopener">CÃ³digo fuente</a>
         </div>
       </div>
 
@@ -343,25 +343,25 @@
       <div class="tool-card win" data-platform="windows" data-repo="SecuritySuite">
         <div class="card-top">
           <div class="card-title-block">
-            <div class="tool-icon win">🔒</div>
-            <div><h3>SecuritySuite</h3><div class="version">v1.0.0</div></div>
+            <div class="tool-icon win">ðŸ”’</div>
+            <div><h3>SecuritySuite</h3><div class="version">v1.0.1</div></div>
           </div>
           <span class="badge badge-new">Nuevo</span>
         </div>
-        <p>Suite de seguridad y privacidad. Desactiva la telemetría de Microsoft, audita programas de inicio, limpia rastros digitales y gestiona reglas de Firewall.</p>
+        <p>Suite de seguridad y privacidad. Desactiva la telemetrÃ­a de Microsoft, audita programas de inicio, limpia rastros digitales y gestiona reglas de Firewall.</p>
         <div class="features-list">
-          <div class="feature-item"><span class="feature-dot"></span>7 servicios de telemetría + 9 tareas programadas</div>
-          <div class="feature-item"><span class="feature-dot"></span>Auditor de inicio con clasificación por riesgo</div>
-          <div class="feature-item"><span class="feature-dot"></span>Limpiador de 8 categorías con vista previa de tamaño</div>
-          <div class="feature-item"><span class="feature-dot"></span>Gestor de Firewall (bloqueo por aplicación)</div>
-          <div class="feature-item"><span class="feature-dot"></span>Puntuación de seguridad 0-100 en tiempo real</div>
+          <div class="feature-item"><span class="feature-dot"></span>7 servicios de telemetrÃ­a + 9 tareas programadas</div>
+          <div class="feature-item"><span class="feature-dot"></span>Auditor de inicio con clasificaciÃ³n por riesgo</div>
+          <div class="feature-item"><span class="feature-dot"></span>Limpiador de 8 categorÃ­as con vista previa de tamaÃ±o</div>
+          <div class="feature-item"><span class="feature-dot"></span>Gestor de Firewall (bloqueo por aplicaciÃ³n)</div>
+          <div class="feature-item"><span class="feature-dot"></span>PuntuaciÃ³n de seguridad 0-100 en tiempo real</div>
         </div>
         <div class="card-footer">
           <a class="download-btn win" href="https://github.com/EnMaNueL-G/SecuritySuite/releases/latest" target="_blank" rel="noopener">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             Descargar .exe
           </a>
-          <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G/SecuritySuite" target="_blank" rel="noopener">Código fuente</a>
+          <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G/SecuritySuite" target="_blank" rel="noopener">CÃ³digo fuente</a>
         </div>
       </div>
 
@@ -369,16 +369,16 @@
       <div class="tool-card droid" data-platform="android" data-repo="PhoneOptimizer">
         <div class="card-top">
           <div class="card-title-block">
-            <div class="tool-icon droid">📱</div>
+            <div class="tool-icon droid">ðŸ“±</div>
             <div><h3>PhoneOptimizer</h3><div class="version">Activo</div></div>
           </div>
           <span class="badge badge-android">Android</span>
         </div>
-        <p>Optimizador general para Android. Gestiona RAM, batería, almacenamiento y procesos activos desde una sola aplicación.</p>
+        <p>Optimizador general para Android. Gestiona RAM, baterÃ­a, almacenamiento y procesos activos desde una sola aplicaciÃ³n.</p>
         <div class="features-list">
           <div class="feature-item"><span class="feature-dot"></span>Liberador de RAM con un toque</div>
-          <div class="feature-item"><span class="feature-dot"></span>Análisis de batería y apps que más consumen</div>
-          <div class="feature-item"><span class="feature-dot"></span>Limpieza de caché y archivos temporales</div>
+          <div class="feature-item"><span class="feature-dot"></span>AnÃ¡lisis de baterÃ­a y apps que mÃ¡s consumen</div>
+          <div class="feature-item"><span class="feature-dot"></span>Limpieza de cachÃ© y archivos temporales</div>
           <div class="feature-item"><span class="feature-dot"></span>Sin root requerido</div>
         </div>
         <div class="card-footer">
@@ -386,7 +386,7 @@
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             Descargar APK
           </a>
-          <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G/PhoneOptimizer" target="_blank" rel="noopener">Código fuente</a>
+          <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G/PhoneOptimizer" target="_blank" rel="noopener">CÃ³digo fuente</a>
         </div>
       </div>
 
@@ -394,16 +394,16 @@
       <div class="tool-card droid" data-platform="android" data-repo="BatteryGuard">
         <div class="card-top">
           <div class="card-title-block">
-            <div class="tool-icon droid">🔋</div>
+            <div class="tool-icon droid">ðŸ”‹</div>
             <div><h3>BatteryGuard</h3><div class="version">v1.0.1</div></div>
           </div>
           <span class="badge badge-android">Android</span>
         </div>
-        <p>Análisis real de salud de la batería. Detecta aplicaciones que drenan energía en segundo plano y optimiza el consumo del dispositivo.</p>
+        <p>AnÃ¡lisis real de salud de la baterÃ­a. Detecta aplicaciones que drenan energÃ­a en segundo plano y optimiza el consumo del dispositivo.</p>
         <div class="features-list">
-          <div class="feature-item"><span class="feature-dot"></span>Salud real de la batería en porcentaje</div>
-          <div class="feature-item"><span class="feature-dot"></span>Ranking de apps por consumo energético</div>
-          <div class="feature-item"><span class="feature-dot"></span>Estimación de tiempo restante</div>
+          <div class="feature-item"><span class="feature-dot"></span>Salud real de la baterÃ­a en porcentaje</div>
+          <div class="feature-item"><span class="feature-dot"></span>Ranking de apps por consumo energÃ©tico</div>
+          <div class="feature-item"><span class="feature-dot"></span>EstimaciÃ³n de tiempo restante</div>
           <div class="feature-item"><span class="feature-dot"></span>Sin root requerido</div>
         </div>
         <div class="card-footer">
@@ -411,7 +411,7 @@
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             Descargar APK
           </a>
-          <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G/BatteryGuard" target="_blank" rel="noopener">Código fuente</a>
+          <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G/BatteryGuard" target="_blank" rel="noopener">CÃ³digo fuente</a>
         </div>
       </div>
 
@@ -419,16 +419,16 @@
       <div class="tool-card droid" data-platform="android" data-repo="StorageCleaner">
         <div class="card-top">
           <div class="card-title-block">
-            <div class="tool-icon droid">💾</div>
+            <div class="tool-icon droid">ðŸ’¾</div>
             <div><h3>StorageCleaner</h3><div class="version">v1.0.1</div></div>
           </div>
           <span class="badge badge-android">Android</span>
         </div>
-        <p>Analizador de almacenamiento por categoría. Muestra qué está ocupando espacio y permite limpiar caché con un toque. Sin sorpresas.</p>
+        <p>Analizador de almacenamiento por categorÃ­a. Muestra quÃ© estÃ¡ ocupando espacio y permite limpiar cachÃ© con un toque. Sin sorpresas.</p>
         <div class="features-list">
-          <div class="feature-item"><span class="feature-dot"></span>Mapa de uso de almacenamiento por categoría</div>
-          <div class="feature-item"><span class="feature-dot"></span>Limpieza de caché de todas las apps</div>
-          <div class="feature-item"><span class="feature-dot"></span>Detección de archivos grandes y duplicados</div>
+          <div class="feature-item"><span class="feature-dot"></span>Mapa de uso de almacenamiento por categorÃ­a</div>
+          <div class="feature-item"><span class="feature-dot"></span>Limpieza de cachÃ© de todas las apps</div>
+          <div class="feature-item"><span class="feature-dot"></span>DetecciÃ³n de archivos grandes y duplicados</div>
           <div class="feature-item"><span class="feature-dot"></span>Sin root requerido</div>
         </div>
         <div class="card-footer">
@@ -436,7 +436,7 @@
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             Descargar APK
           </a>
-          <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G/StorageCleaner" target="_blank" rel="noopener">Código fuente</a>
+          <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G/StorageCleaner" target="_blank" rel="noopener">CÃ³digo fuente</a>
         </div>
       </div>
 
@@ -444,24 +444,24 @@
       <div class="tool-card droid" data-platform="android" data-repo="NetworkGuard">
         <div class="card-top">
           <div class="card-title-block">
-            <div class="tool-icon droid">📡</div>
+            <div class="tool-icon droid">ðŸ“¡</div>
             <div><h3>NetworkGuard</h3><div class="version">v1.0.0</div></div>
           </div>
           <span class="badge badge-android">Android</span>
         </div>
-        <p>Monitor de tráfico de red por aplicación en tiempo real. Detecta qué apps están transfiriendo datos y cuánto. Sin root, sin VPN local.</p>
+        <p>Monitor de trÃ¡fico de red por aplicaciÃ³n en tiempo real. Detecta quÃ© apps estÃ¡n transfiriendo datos y cuÃ¡nto. Sin root, sin VPN local.</p>
         <div class="features-list">
-          <div class="feature-item"><span class="feature-dot"></span>Tráfico en tiempo real por aplicación</div>
+          <div class="feature-item"><span class="feature-dot"></span>TrÃ¡fico en tiempo real por aplicaciÃ³n</div>
           <div class="feature-item"><span class="feature-dot"></span>Descarga + subida separados por app</div>
-          <div class="feature-item"><span class="feature-dot"></span>Historial de consumo por sesión</div>
-          <div class="feature-item"><span class="feature-dot"></span>Sin root · Android 8+</div>
+          <div class="feature-item"><span class="feature-dot"></span>Historial de consumo por sesiÃ³n</div>
+          <div class="feature-item"><span class="feature-dot"></span>Sin root Â· Android 8+</div>
         </div>
         <div class="card-footer">
           <a class="download-btn droid" href="https://github.com/EnMaNueL-G/NetworkGuard/releases/latest" target="_blank" rel="noopener">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             Descargar APK
           </a>
-          <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G/NetworkGuard" target="_blank" rel="noopener">Código fuente</a>
+          <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G/NetworkGuard" target="_blank" rel="noopener">CÃ³digo fuente</a>
         </div>
       </div>
 
@@ -469,25 +469,25 @@
       <div class="tool-card droid" data-platform="android" data-repo="AndroidSecurity">
         <div class="card-top">
           <div class="card-title-block">
-            <div class="tool-icon droid">🔒</div>
+            <div class="tool-icon droid">ðŸ”’</div>
             <div><h3>AndroidSecurity</h3><div class="version">v1.1.0</div></div>
           </div>
           <span class="badge badge-android">Android</span>
         </div>
-        <p>Auditoría completa de seguridad y privacidad para Android. Sin root, sin internet, 100% local. Detecta amenazas reales, monitorea cámara/micrófono en tiempo real y analiza anomalías del dispositivo.</p>
+        <p>AuditorÃ­a completa de seguridad y privacidad para Android. Sin root, sin internet, 100% local. Detecta amenazas reales, monitorea cÃ¡mara/micrÃ³fono en tiempo real y analiza anomalÃ­as del dispositivo.</p>
         <div class="features-list">
-          <div class="feature-item"><span class="feature-dot"></span>Auditor de permisos — cero falsos positivos en apps del sistema</div>
-          <div class="feature-item"><span class="feature-dot"></span>Detector de espías — combinaciones peligrosas con descripción en español</div>
-          <div class="feature-item"><span class="feature-dot"></span>Guard en tiempo real — cámara y micrófono LIBRE / EN USO</div>
-          <div class="feature-item"><span class="feature-dot"></span>Anomalías — root, USB debug, VPN, certificados CA, notif listeners</div>
-          <div class="feature-item"><span class="feature-dot"></span>Mi Huella Digital — puntuación de privacidad personalizada</div>
+          <div class="feature-item"><span class="feature-dot"></span>Auditor de permisos â€” cero falsos positivos en apps del sistema</div>
+          <div class="feature-item"><span class="feature-dot"></span>Detector de espÃ­as â€” combinaciones peligrosas con descripciÃ³n en espaÃ±ol</div>
+          <div class="feature-item"><span class="feature-dot"></span>Guard en tiempo real â€” cÃ¡mara y micrÃ³fono LIBRE / EN USO</div>
+          <div class="feature-item"><span class="feature-dot"></span>AnomalÃ­as â€” root, USB debug, VPN, certificados CA, notif listeners</div>
+          <div class="feature-item"><span class="feature-dot"></span>Mi Huella Digital â€” puntuaciÃ³n de privacidad personalizada</div>
         </div>
         <div class="card-footer">
           <a class="download-btn droid" href="https://github.com/EnMaNueL-G/AndroidSecurity/releases/download/v1.1.0/AndroidSecurity-v1.1.0.apk" target="_blank" rel="noopener">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             Descargar APK v1.1.0
           </a>
-          <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G/AndroidSecurity" target="_blank" rel="noopener">Código fuente</a>
+          <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G/AndroidSecurity" target="_blank" rel="noopener">CÃ³digo fuente</a>
         </div>
       </div>
 
@@ -495,26 +495,26 @@
 
     <!-- Coming soon -->
     <div style="margin-top:48px; border-top:1px solid var(--border); padding-top:40px;">
-      <div class="section-tag">Próximamente</div>
+      <div class="section-tag">PrÃ³ximamente</div>
       <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap:12px; margin-top:20px;">
         <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px;display:flex;align-items:center;gap:12px;">
-          <span style="font-size:1.4rem;">🛡️</span>
-          <div><div style="font-weight:600;font-size:0.9rem;">AndroidSecurity</div><div style="font-size:0.78rem;color:var(--text-3);">Android · Auditor de permisos</div></div>
+          <span style="font-size:1.4rem;">ðŸ›¡ï¸</span>
+          <div><div style="font-weight:600;font-size:0.9rem;">AndroidSecurity</div><div style="font-size:0.78rem;color:var(--text-3);">Android Â· Auditor de permisos</div></div>
           <span class="badge badge-soon" style="margin-left:auto">Pronto</span>
         </div>
         <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px;display:flex;align-items:center;gap:12px;">
-          <span style="font-size:1.4rem;">🌐</span>
-          <div><div style="font-weight:600;font-size:0.9rem;">NetworkSuite</div><div style="font-size:0.78rem;color:var(--text-3);">Windows · Scanner + WiFi + DNS</div></div>
+          <span style="font-size:1.4rem;">ðŸŒ</span>
+          <div><div style="font-weight:600;font-size:0.9rem;">NetworkSuite</div><div style="font-size:0.78rem;color:var(--text-3);">Windows Â· Scanner + WiFi + DNS</div></div>
           <span class="badge badge-soon" style="margin-left:auto">Pronto</span>
         </div>
         <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px;display:flex;align-items:center;gap:12px;">
-          <span style="font-size:1.4rem;">🔧</span>
-          <div><div style="font-weight:600;font-size:0.9rem;">SystemDiag</div><div style="font-size:0.78rem;color:var(--text-3);">Windows · Hardware + SMART + Bench</div></div>
+          <span style="font-size:1.4rem;">ðŸ”§</span>
+          <div><div style="font-weight:600;font-size:0.9rem;">SystemDiag</div><div style="font-size:0.78rem;color:var(--text-3);">Windows Â· Hardware + SMART + Bench</div></div>
           <span class="badge badge-soon" style="margin-left:auto">Pronto</span>
         </div>
         <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px;display:flex;align-items:center;gap:12px;">
-          <span style="font-size:1.4rem;">📁</span>
-          <div><div style="font-weight:600;font-size:0.9rem;">FileSuite</div><div style="font-size:0.78rem;color:var(--text-3);">Windows · Duplicados + mapa disco</div></div>
+          <span style="font-size:1.4rem;">ðŸ“</span>
+          <div><div style="font-weight:600;font-size:0.9rem;">FileSuite</div><div style="font-size:0.78rem;color:var(--text-3);">Windows Â· Duplicados + mapa disco</div></div>
           <span class="badge badge-soon" style="margin-left:auto">Pronto</span>
         </div>
       </div>
@@ -522,9 +522,9 @@
   </div>
 </main>
 
-<!-- ══════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      PAGE: WINDOWS
-═══════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <main id="page-windows" class="page">
   <div class="container">
     <div class="platform-hero">
@@ -535,7 +535,7 @@
         <span class="badge badge-win">Windows 10</span>
         <span class="badge badge-win">Windows 11</span>
         <span class="badge badge-win">x64</span>
-        <span style="font-size:0.83rem;color:var(--text-3);align-self:center;">PowerShell 5.1 · .NET 4.7.2 incluido</span>
+        <span style="font-size:0.83rem;color:var(--text-3);align-self:center;">PowerShell 5.1 Â· .NET 4.7.2 incluido</span>
       </div>
     </div>
 
@@ -544,18 +544,18 @@
       <div class="tool-card win">
         <div class="card-top">
           <div class="card-title-block">
-            <div class="tool-icon win">🖥️</div>
+            <div class="tool-icon win">ðŸ–¥ï¸</div>
             <div><h3>WinOptimizer</h3><div class="version">v2.3.1</div></div>
           </div>
         </div>
-        <p>Monitor de rendimiento completo con gestor de inicio integrado. Libera RAM, limpia temporales, controla qué arranca con Windows.</p>
+        <p>Monitor de rendimiento completo con gestor de inicio integrado. Libera RAM, limpia temporales, controla quÃ© arranca con Windows.</p>
         <div class="features-list">
-          <div class="feature-item"><span class="feature-dot"></span>RAM física, virtual y caché en tiempo real</div>
+          <div class="feature-item"><span class="feature-dot"></span>RAM fÃ­sica, virtual y cachÃ© en tiempo real</div>
           <div class="feature-item"><span class="feature-dot"></span>Temperatura de CPU, top 5 procesos por RAM</div>
-          <div class="feature-item"><span class="feature-dot"></span>Gestor de inicio con recomendaciones automáticas</div>
-          <div class="feature-item"><span class="feature-dot"></span>Historial gráfico de 2 minutos (CPU + RAM)</div>
-          <div class="feature-item"><span class="feature-dot"></span>Bandeja del sistema + auto-optimización</div>
-          <div class="feature-item"><span class="feature-dot"></span>87 KB compilado · sin instalador</div>
+          <div class="feature-item"><span class="feature-dot"></span>Gestor de inicio con recomendaciones automÃ¡ticas</div>
+          <div class="feature-item"><span class="feature-dot"></span>Historial grÃ¡fico de 2 minutos (CPU + RAM)</div>
+          <div class="feature-item"><span class="feature-dot"></span>Bandeja del sistema + auto-optimizaciÃ³n</div>
+          <div class="feature-item"><span class="feature-dot"></span>87 KB compilado Â· sin instalador</div>
         </div>
         <div class="card-footer">
           <a class="download-btn win" href="https://github.com/EnMaNueL-G/WinOptimizer/releases/latest" target="_blank" rel="noopener">
@@ -570,19 +570,19 @@
       <div class="tool-card win">
         <div class="card-top">
           <div class="card-title-block">
-            <div class="tool-icon win">🔒</div>
-            <div><h3>SecuritySuite</h3><div class="version">v1.0.0</div></div>
+            <div class="tool-icon win">ðŸ”’</div>
+            <div><h3>SecuritySuite</h3><div class="version">v1.0.1</div></div>
           </div>
           <span class="badge badge-new">Nuevo</span>
         </div>
-        <p>Reemplaza O&O ShutUp10 + CCleaner + gestor de Firewall en una sola herramienta gratuita y de código abierto.</p>
+        <p>Reemplaza O&O ShutUp10 + CCleaner + gestor de Firewall en una sola herramienta gratuita y de cÃ³digo abierto.</p>
         <div class="features-list">
-          <div class="feature-item"><span class="feature-dot"></span>7 servicios de telemetría desactivables con un clic</div>
+          <div class="feature-item"><span class="feature-dot"></span>7 servicios de telemetrÃ­a desactivables con un clic</div>
           <div class="feature-item"><span class="feature-dot"></span>9 tareas programadas de Microsoft</div>
-          <div class="feature-item"><span class="feature-dot"></span>Auditor de inicio con clasificación Alto/Medio/Bajo</div>
-          <div class="feature-item"><span class="feature-dot"></span>8 categorías de limpieza con vista previa de tamaño</div>
+          <div class="feature-item"><span class="feature-dot"></span>Auditor de inicio con clasificaciÃ³n Alto/Medio/Bajo</div>
+          <div class="feature-item"><span class="feature-dot"></span>8 categorÃ­as de limpieza con vista previa de tamaÃ±o</div>
           <div class="feature-item"><span class="feature-dot"></span>Bloqueo de apps al Firewall por selector de archivo</div>
-          <div class="feature-item"><span class="feature-dot"></span>Puntuación de seguridad 0-100 en tiempo real</div>
+          <div class="feature-item"><span class="feature-dot"></span>PuntuaciÃ³n de seguridad 0-100 en tiempo real</div>
         </div>
         <div class="card-footer">
           <a class="download-btn win" href="https://github.com/EnMaNueL-G/SecuritySuite/releases/latest" target="_blank" rel="noopener">
@@ -598,18 +598,18 @@
     <div style="margin-top:48px;border-top:1px solid var(--border);padding-top:32px;">
       <div class="section-tag">En desarrollo para Windows</div>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-top:16px;">
-        <div class="category-card"><div class="cat-icon">🌐</div><div class="cat-name">NetworkSuite</div><div class="cat-count">RouterScan · WiFi · DNS Benchmark · Seguridad</div></div>
-        <div class="category-card"><div class="cat-icon">🔧</div><div class="cat-name">SystemDiag</div><div class="cat-count">CPU · RAM · SMART · Temperatura · Drivers</div></div>
-        <div class="category-card"><div class="cat-icon">📁</div><div class="cat-name">FileSuite</div><div class="cat-count">Mapa disco · Duplicados · Limpieza · Backup</div></div>
-        <div class="category-card"><div class="cat-icon">🎯</div><div class="cat-name">FocusSuite</div><div class="cat-count">Pomodoro · App Timer · Historial de uso</div></div>
+        <div class="category-card"><div class="cat-icon">ðŸŒ</div><div class="cat-name">NetworkSuite</div><div class="cat-count">RouterScan Â· WiFi Â· DNS Benchmark Â· Seguridad</div></div>
+        <div class="category-card"><div class="cat-icon">ðŸ”§</div><div class="cat-name">SystemDiag</div><div class="cat-count">CPU Â· RAM Â· SMART Â· Temperatura Â· Drivers</div></div>
+        <div class="category-card"><div class="cat-icon">ðŸ“</div><div class="cat-name">FileSuite</div><div class="cat-count">Mapa disco Â· Duplicados Â· Limpieza Â· Backup</div></div>
+        <div class="category-card"><div class="cat-icon">ðŸŽ¯</div><div class="cat-name">FocusSuite</div><div class="cat-count">Pomodoro Â· App Timer Â· Historial de uso</div></div>
       </div>
     </div>
   </div>
 </main>
 
-<!-- ══════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      PAGE: ANDROID
-═══════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <main id="page-android" class="page">
   <div class="container">
     <div class="platform-hero">
@@ -620,18 +620,18 @@
         <span class="badge badge-android">Android 8+</span>
         <span class="badge badge-android">Sin root</span>
         <span class="badge badge-android">APK directo</span>
-        <span style="font-size:0.83rem;color:var(--text-3);align-self:center;">Kotlin · Jetpack Compose</span>
+        <span style="font-size:0.83rem;color:var(--text-3);align-self:center;">Kotlin Â· Jetpack Compose</span>
       </div>
     </div>
 
     <div class="tools-grid">
       <div class="tool-card droid">
-        <div class="card-top"><div class="card-title-block"><div class="tool-icon droid">📱</div><div><h3>PhoneOptimizer</h3><div class="version">Activo</div></div></div></div>
-        <p>Optimizador general. RAM, batería, almacenamiento y procesos en una sola app.</p>
+        <div class="card-top"><div class="card-title-block"><div class="tool-icon droid">ðŸ“±</div><div><h3>PhoneOptimizer</h3><div class="version">Activo</div></div></div></div>
+        <p>Optimizador general. RAM, baterÃ­a, almacenamiento y procesos en una sola app.</p>
         <div class="features-list">
           <div class="feature-item"><span class="feature-dot"></span>Liberador de RAM con un toque</div>
-          <div class="feature-item"><span class="feature-dot"></span>Análisis de batería y apps que consumen</div>
-          <div class="feature-item"><span class="feature-dot"></span>Limpieza de caché y temporales</div>
+          <div class="feature-item"><span class="feature-dot"></span>AnÃ¡lisis de baterÃ­a y apps que consumen</div>
+          <div class="feature-item"><span class="feature-dot"></span>Limpieza de cachÃ© y temporales</div>
         </div>
         <div class="card-footer">
           <a class="download-btn droid" href="https://github.com/EnMaNueL-G/PhoneOptimizer/releases/latest" target="_blank">
@@ -643,12 +643,12 @@
       </div>
 
       <div class="tool-card droid">
-        <div class="card-top"><div class="card-title-block"><div class="tool-icon droid">🔋</div><div><h3>BatteryGuard</h3><div class="version">v1.0.1</div></div></div></div>
-        <p>Salud real de batería, apps que drenan energía y optimización de consumo.</p>
+        <div class="card-top"><div class="card-title-block"><div class="tool-icon droid">ðŸ”‹</div><div><h3>BatteryGuard</h3><div class="version">v1.0.1</div></div></div></div>
+        <p>Salud real de baterÃ­a, apps que drenan energÃ­a y optimizaciÃ³n de consumo.</p>
         <div class="features-list">
-          <div class="feature-item"><span class="feature-dot"></span>Salud real de la batería en %</div>
+          <div class="feature-item"><span class="feature-dot"></span>Salud real de la baterÃ­a en %</div>
           <div class="feature-item"><span class="feature-dot"></span>Ranking de apps por consumo</div>
-          <div class="feature-item"><span class="feature-dot"></span>Estimación de tiempo restante</div>
+          <div class="feature-item"><span class="feature-dot"></span>EstimaciÃ³n de tiempo restante</div>
         </div>
         <div class="card-footer">
           <a class="download-btn droid" href="https://github.com/EnMaNueL-G/BatteryGuard/releases/latest" target="_blank">
@@ -660,12 +660,12 @@
       </div>
 
       <div class="tool-card droid">
-        <div class="card-top"><div class="card-title-block"><div class="tool-icon droid">💾</div><div><h3>StorageCleaner</h3><div class="version">v1.0.1</div></div></div></div>
-        <p>Análisis de almacenamiento por categoría y limpieza de caché con un toque.</p>
+        <div class="card-top"><div class="card-title-block"><div class="tool-icon droid">ðŸ’¾</div><div><h3>StorageCleaner</h3><div class="version">v1.0.1</div></div></div></div>
+        <p>AnÃ¡lisis de almacenamiento por categorÃ­a y limpieza de cachÃ© con un toque.</p>
         <div class="features-list">
-          <div class="feature-item"><span class="feature-dot"></span>Mapa de uso por categoría</div>
-          <div class="feature-item"><span class="feature-dot"></span>Limpieza de caché de todas las apps</div>
-          <div class="feature-item"><span class="feature-dot"></span>Detección de archivos grandes</div>
+          <div class="feature-item"><span class="feature-dot"></span>Mapa de uso por categorÃ­a</div>
+          <div class="feature-item"><span class="feature-dot"></span>Limpieza de cachÃ© de todas las apps</div>
+          <div class="feature-item"><span class="feature-dot"></span>DetecciÃ³n de archivos grandes</div>
         </div>
         <div class="card-footer">
           <a class="download-btn droid" href="https://github.com/EnMaNueL-G/StorageCleaner/releases/latest" target="_blank">
@@ -677,12 +677,12 @@
       </div>
 
       <div class="tool-card droid">
-        <div class="card-top"><div class="card-title-block"><div class="tool-icon droid">📡</div><div><h3>NetworkGuard</h3><div class="version">v1.0.0</div></div></div></div>
-        <p>Monitor de tráfico de red por app en tiempo real. Sin root, sin VPN local.</p>
+        <div class="card-top"><div class="card-title-block"><div class="tool-icon droid">ðŸ“¡</div><div><h3>NetworkGuard</h3><div class="version">v1.0.0</div></div></div></div>
+        <p>Monitor de trÃ¡fico de red por app en tiempo real. Sin root, sin VPN local.</p>
         <div class="features-list">
-          <div class="feature-item"><span class="feature-dot"></span>Tráfico por app en tiempo real</div>
+          <div class="feature-item"><span class="feature-dot"></span>TrÃ¡fico por app en tiempo real</div>
           <div class="feature-item"><span class="feature-dot"></span>Descarga + subida separados</div>
-          <div class="feature-item"><span class="feature-dot"></span>Android 8+ · Sin root</div>
+          <div class="feature-item"><span class="feature-dot"></span>Android 8+ Â· Sin root</div>
         </div>
         <div class="card-footer">
           <a class="download-btn droid" href="https://github.com/EnMaNueL-G/NetworkGuard/releases/latest" target="_blank">
@@ -697,16 +697,16 @@
     <div style="margin-top:48px;border-top:1px solid var(--border);padding-top:32px;">
       <div class="section-tag">En desarrollo para Android</div>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-top:16px;">
-        <div class="category-card"><div class="cat-icon">🛡️</div><div class="cat-name">AndroidSecurity</div><div class="cat-count">Permisos · Apps espía · Guard cámara/mic</div></div>
-        <div class="category-card"><div class="cat-icon">🎯</div><div class="cat-name">FocusSuite</div><div class="cat-count">Pomodoro · App Timer · Uso diario</div></div>
+        <div class="category-card"><div class="cat-icon">ðŸ›¡ï¸</div><div class="cat-name">AndroidSecurity</div><div class="cat-count">Permisos Â· Apps espÃ­a Â· Guard cÃ¡mara/mic</div></div>
+        <div class="category-card"><div class="cat-icon">ðŸŽ¯</div><div class="cat-name">FocusSuite</div><div class="cat-count">Pomodoro Â· App Timer Â· Uso diario</div></div>
       </div>
     </div>
   </div>
 </main>
 
-<!-- ══════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      PAGE: UPDATES
-═══════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <main id="page-updates" class="page">
   <div class="container">
     <div class="platform-hero">
@@ -725,11 +725,29 @@
           <span class="badge badge-win" style="width:fit-content">Windows</span>
         </div>
         <div class="update-content">
-          <h3>WinOptimizer — Corrección de error NULL al iniciar</h3>
-          <p>Corregido el error "No se puede llamar a un método en una expresión con valor NULL" que aparecía al abrir la aplicación.</p>
+          <h3>WinOptimizer â€” CorrecciÃ³n de error NULL al iniciar</h3>
+          <p>Corregido el error "No se puede llamar a un mÃ©todo en una expresiÃ³n con valor NULL" que aparecÃ­a al abrir la aplicaciÃ³n.</p>
           <div class="update-changes">
-            <div class="change-line"><span class="change-icon">🔧</span><span><code style="background:var(--bg-raised);padding:1px 5px;border-radius:4px;font-size:0.8rem;">$stTimer</code> movido a scope de script para garantizar acceso desde el handler asíncrono del DispatcherTimer</span></div>
-            <div class="change-line"><span class="change-icon">🔧</span><span>Handler <code style="background:var(--bg-raised);padding:1px 5px;border-radius:4px;font-size:0.8rem;">Add_Loaded</code> completamente protegido con bloques try/catch independientes</span></div>
+            <div class="change-line"><span class="change-icon">ðŸ”§</span><span><code style="background:var(--bg-raised);padding:1px 5px;border-radius:4px;font-size:0.8rem;">$stTimer</code> movido a scope de script para garantizar acceso desde el handler asÃ­ncrono del DispatcherTimer</span></div>
+            <div class="change-line"><span class="change-icon">ðŸ”§</span><span>Handler <code style="background:var(--bg-raised);padding:1px 5px;border-radius:4px;font-size:0.8rem;">Add_Loaded</code> completamente protegido con bloques try/catch independientes</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="update-item">
+        <div class="update-meta">
+          <span class="update-date">Jun 2026</span>
+          <span class="update-ver">v1.0.1</span>
+          <span class="update-type type-fix">Fix</span>
+          <span class="badge badge-win" style="width:fit-content">Windows</span>
+        </div>
+        <div class="update-content">
+          <h3>SecuritySuite — Corrección lista de telemetría</h3>
+          <p>Corrección del bug visual que mostraba la lista de servicios y tareas de telemetría vacía. Icono de aplicación rediseñado.</p>
+          <div class="update-changes">
+            <div class="change-line"><span class="change-icon">🐛</span><span>Lista de servicios de telemetría ahora muestra los 7 servicios correctamente</span></div>
+            <div class="change-line"><span class="change-icon">🐛</span><span>Lista de tareas programadas ahora visible con botones funcionales</span></div>
+            <div class="change-line"><span class="change-icon">🎨</span><span>Icono rediseñado: escudo con candado sobre fondo oscuro</span></div>
           </div>
         </div>
       </div>
@@ -742,14 +760,14 @@
           <span class="badge badge-win" style="width:fit-content">Windows</span>
         </div>
         <div class="update-content">
-          <h3>SecuritySuite — Lanzamiento inicial</h3>
-          <p>Suite de seguridad y privacidad para Windows. Combina 4 herramientas en una: control de telemetría, auditor de inicio, limpieza de rastros y gestión de Firewall.</p>
+          <h3>SecuritySuite â€” Lanzamiento inicial</h3>
+          <p>Suite de seguridad y privacidad para Windows. Combina 4 herramientas en una: control de telemetrÃ­a, auditor de inicio, limpieza de rastros y gestiÃ³n de Firewall.</p>
           <div class="update-changes">
-            <div class="change-line"><span class="change-icon">✨</span><span>Módulo de telemetría: 7 servicios + 9 tareas programadas de Microsoft</span></div>
-            <div class="change-line"><span class="change-icon">✨</span><span>Auditor de inicio con clasificación automática por riesgo (Alto/Medio/Bajo)</span></div>
-            <div class="change-line"><span class="change-icon">✨</span><span>Limpiador de 8 categorías con análisis de tamaño previo</span></div>
-            <div class="change-line"><span class="change-icon">✨</span><span>Gestor de Firewall: bloquear/desbloquear apps al acceso a Internet</span></div>
-            <div class="change-line"><span class="change-icon">✨</span><span>Puntuación de seguridad 0-100 calculada en tiempo real</span></div>
+            <div class="change-line"><span class="change-icon">âœ¨</span><span>MÃ³dulo de telemetrÃ­a: 7 servicios + 9 tareas programadas de Microsoft</span></div>
+            <div class="change-line"><span class="change-icon">âœ¨</span><span>Auditor de inicio con clasificaciÃ³n automÃ¡tica por riesgo (Alto/Medio/Bajo)</span></div>
+            <div class="change-line"><span class="change-icon">âœ¨</span><span>Limpiador de 8 categorÃ­as con anÃ¡lisis de tamaÃ±o previo</span></div>
+            <div class="change-line"><span class="change-icon">âœ¨</span><span>Gestor de Firewall: bloquear/desbloquear apps al acceso a Internet</span></div>
+            <div class="change-line"><span class="change-icon">âœ¨</span><span>PuntuaciÃ³n de seguridad 0-100 calculada en tiempo real</span></div>
           </div>
         </div>
       </div>
@@ -762,11 +780,11 @@
           <span class="badge badge-win" style="width:fit-content">Windows</span>
         </div>
         <div class="update-content">
-          <h3>WinOptimizer — Gestor de inicio integrado</h3>
+          <h3>WinOptimizer â€” Gestor de inicio integrado</h3>
           <div class="update-changes">
-            <div class="change-line"><span class="change-icon">✨</span><span>Gestor de inicio de Windows directamente en la GUI — sin abrir el Administrador de tareas</span></div>
-            <div class="change-line"><span class="change-icon">✨</span><span>Recomendaciones automáticas por categoría para cada entrada de inicio</span></div>
-            <div class="change-line"><span class="change-icon">🔧</span><span>Eliminado acceso externo al Administrador de tareas</span></div>
+            <div class="change-line"><span class="change-icon">âœ¨</span><span>Gestor de inicio de Windows directamente en la GUI â€” sin abrir el Administrador de tareas</span></div>
+            <div class="change-line"><span class="change-icon">âœ¨</span><span>Recomendaciones automÃ¡ticas por categorÃ­a para cada entrada de inicio</span></div>
+            <div class="change-line"><span class="change-icon">ðŸ”§</span><span>Eliminado acceso externo al Administrador de tareas</span></div>
           </div>
         </div>
       </div>
@@ -779,11 +797,11 @@
           <span class="badge badge-win" style="width:fit-content">Windows</span>
         </div>
         <div class="update-content">
-          <h3>WinOptimizer — Correcciones críticas de inicialización</h3>
+          <h3>WinOptimizer â€” Correcciones crÃ­ticas de inicializaciÃ³n</h3>
           <div class="update-changes">
-            <div class="change-line"><span class="change-icon">🔧</span><span>Función <code style="background:var(--bg-raised);padding:1px 5px;border-radius:4px;font-size:0.8rem;">On()</code> con null-check para todos los eventos WPF</span></div>
-            <div class="change-line"><span class="change-icon">🔧</span><span>Wrappers <code style="background:var(--bg-raised);padding:1px 5px;border-radius:4px;font-size:0.8rem;">SafeText</code> y <code style="background:var(--bg-raised);padding:1px 5px;border-radius:4px;font-size:0.8rem;">SafeBar</code> en toda la UI</span></div>
-            <div class="change-line"><span class="change-icon">🔧</span><span>Operadores de comparación corregidos (espacios requeridos en PS 5.1)</span></div>
+            <div class="change-line"><span class="change-icon">ðŸ”§</span><span>FunciÃ³n <code style="background:var(--bg-raised);padding:1px 5px;border-radius:4px;font-size:0.8rem;">On()</code> con null-check para todos los eventos WPF</span></div>
+            <div class="change-line"><span class="change-icon">ðŸ”§</span><span>Wrappers <code style="background:var(--bg-raised);padding:1px 5px;border-radius:4px;font-size:0.8rem;">SafeText</code> y <code style="background:var(--bg-raised);padding:1px 5px;border-radius:4px;font-size:0.8rem;">SafeBar</code> en toda la UI</span></div>
+            <div class="change-line"><span class="change-icon">ðŸ”§</span><span>Operadores de comparaciÃ³n corregidos (espacios requeridos en PS 5.1)</span></div>
           </div>
         </div>
       </div>
@@ -796,11 +814,11 @@
           <span class="badge badge-win" style="width:fit-content">Windows</span>
         </div>
         <div class="update-content">
-          <h3>WinOptimizer — Temperatura CPU, Kill process, Auto-optimización</h3>
+          <h3>WinOptimizer â€” Temperatura CPU, Kill process, Auto-optimizaciÃ³n</h3>
           <div class="update-changes">
-            <div class="change-line"><span class="change-icon">✨</span><span>Temperatura de CPU en tiempo real</span></div>
-            <div class="change-line"><span class="change-icon">✨</span><span>Botón Kill en Top 5 procesos por RAM</span></div>
-            <div class="change-line"><span class="change-icon">✨</span><span>Auto-optimización programada cada 5/15/30 minutos</span></div>
+            <div class="change-line"><span class="change-icon">âœ¨</span><span>Temperatura de CPU en tiempo real</span></div>
+            <div class="change-line"><span class="change-icon">âœ¨</span><span>BotÃ³n Kill en Top 5 procesos por RAM</span></div>
+            <div class="change-line"><span class="change-icon">âœ¨</span><span>Auto-optimizaciÃ³n programada cada 5/15/30 minutos</span></div>
           </div>
         </div>
       </div>
@@ -809,112 +827,112 @@
   </div>
 </main>
 
-<!-- ══════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      PAGE: CATEGORIES
-═══════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <main id="page-categories" class="page">
   <div class="container">
     <div class="platform-hero">
-      <div class="section-tag">Explorar por categoría</div>
-      <h1>Categorías</h1>
-      <p>Las herramientas organizadas por tipo de función. Cada suite combina funciones relacionadas en una sola app.</p>
+      <div class="section-tag">Explorar por categorÃ­a</div>
+      <h1>CategorÃ­as</h1>
+      <p>Las herramientas organizadas por tipo de funciÃ³n. Cada suite combina funciones relacionadas en una sola app.</p>
     </div>
 
     <div class="categories-grid">
       <div class="category-card" style="cursor:pointer" onclick="navigate('windows')">
-        <div class="cat-icon">⚡</div>
+        <div class="cat-icon">âš¡</div>
         <div class="cat-name">Rendimiento del sistema</div>
-        <div class="cat-count">WinOptimizer · PhoneOptimizer</div>
-        <div style="margin-top:10px;font-size:0.78rem;color:var(--text-3);">RAM · CPU · disco · red · procesos</div>
+        <div class="cat-count">WinOptimizer Â· PhoneOptimizer</div>
+        <div style="margin-top:10px;font-size:0.78rem;color:var(--text-3);">RAM Â· CPU Â· disco Â· red Â· procesos</div>
       </div>
       <div class="category-card" style="cursor:pointer" onclick="navigate('tools')">
-        <div class="cat-icon">🔒</div>
+        <div class="cat-icon">ðŸ”’</div>
         <div class="cat-name">Seguridad y privacidad</div>
-        <div class="cat-count">SecuritySuite · AndroidSecurity</div>
-        <div style="margin-top:10px;font-size:0.78rem;color:var(--text-3);">Telemetría · permisos · firewall</div>
+        <div class="cat-count">SecuritySuite Â· AndroidSecurity</div>
+        <div style="margin-top:10px;font-size:0.78rem;color:var(--text-3);">TelemetrÃ­a Â· permisos Â· firewall</div>
       </div>
       <div class="category-card" style="cursor:pointer" onclick="navigate('android')">
-        <div class="cat-icon">🔋</div>
-        <div class="cat-name">Batería y energía</div>
+        <div class="cat-icon">ðŸ”‹</div>
+        <div class="cat-name">BaterÃ­a y energÃ­a</div>
         <div class="cat-count">BatteryGuard</div>
-        <div style="margin-top:10px;font-size:0.78rem;color:var(--text-3);">Salud · consumo · optimización</div>
+        <div style="margin-top:10px;font-size:0.78rem;color:var(--text-3);">Salud Â· consumo Â· optimizaciÃ³n</div>
       </div>
       <div class="category-card" style="cursor:pointer" onclick="navigate('android')">
-        <div class="cat-icon">💾</div>
+        <div class="cat-icon">ðŸ’¾</div>
         <div class="cat-name">Almacenamiento</div>
-        <div class="cat-count">StorageCleaner · FileSuite</div>
-        <div style="margin-top:10px;font-size:0.78rem;color:var(--text-3);">Análisis · limpieza · duplicados</div>
+        <div class="cat-count">StorageCleaner Â· FileSuite</div>
+        <div style="margin-top:10px;font-size:0.78rem;color:var(--text-3);">AnÃ¡lisis Â· limpieza Â· duplicados</div>
       </div>
       <div class="category-card" style="cursor:pointer" onclick="navigate('android')">
-        <div class="cat-icon">🌐</div>
+        <div class="cat-icon">ðŸŒ</div>
         <div class="cat-name">Red y conectividad</div>
-        <div class="cat-count">NetworkGuard · NetworkSuite</div>
-        <div style="margin-top:10px;font-size:0.78rem;color:var(--text-3);">Tráfico · WiFi · DNS · scanner</div>
+        <div class="cat-count">NetworkGuard Â· NetworkSuite</div>
+        <div style="margin-top:10px;font-size:0.78rem;color:var(--text-3);">TrÃ¡fico Â· WiFi Â· DNS Â· scanner</div>
       </div>
       <div class="category-card">
-        <div class="cat-icon">🔧</div>
-        <div class="cat-name">Diagnóstico de hardware</div>
+        <div class="cat-icon">ðŸ”§</div>
+        <div class="cat-name">DiagnÃ³stico de hardware</div>
         <div class="cat-count">SystemDiag <span class="badge badge-soon" style="vertical-align:middle">Pronto</span></div>
-        <div style="margin-top:10px;font-size:0.78rem;color:var(--text-3);">CPU · RAM · SMART · temperatura</div>
+        <div style="margin-top:10px;font-size:0.78rem;color:var(--text-3);">CPU Â· RAM Â· SMART Â· temperatura</div>
       </div>
       <div class="category-card">
-        <div class="cat-icon">🎯</div>
+        <div class="cat-icon">ðŸŽ¯</div>
         <div class="cat-name">Productividad</div>
         <div class="cat-count">FocusSuite <span class="badge badge-soon" style="vertical-align:middle">Pronto</span></div>
-        <div style="margin-top:10px;font-size:0.78rem;color:var(--text-3);">Pomodoro · timer · uso diario</div>
+        <div style="margin-top:10px;font-size:0.78rem;color:var(--text-3);">Pomodoro Â· timer Â· uso diario</div>
       </div>
       <div class="category-card">
-        <div class="cat-icon">🛡️</div>
+        <div class="cat-icon">ðŸ›¡ï¸</div>
         <div class="cat-name">Seguridad Android</div>
         <div class="cat-count">AndroidSecurity <span class="badge badge-soon" style="vertical-align:middle">Pronto</span></div>
-        <div style="margin-top:10px;font-size:0.78rem;color:var(--text-3);">Permisos · APK · cámara/mic guard</div>
+        <div style="margin-top:10px;font-size:0.78rem;color:var(--text-3);">Permisos Â· APK Â· cÃ¡mara/mic guard</div>
       </div>
     </div>
   </div>
 </main>
 
-<!-- ══════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      PAGE: ABOUT
-═══════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <main id="page-about" class="page">
   <div class="container">
     <div class="platform-hero">
       <div class="section-tag">El proyecto</div>
       <h1>Sobre OptiSuite</h1>
-      <p>Por qué existe, qué lo diferencia y cómo se desarrolla.</p>
+      <p>Por quÃ© existe, quÃ© lo diferencia y cÃ³mo se desarrolla.</p>
     </div>
 
     <div class="about-grid">
       <div>
         <h2 style="margin-bottom:16px;">Un problema real</h2>
-        <p style="margin-bottom:16px;">Las apps de "optimización" del mercado suelen venir con publicidad invasiva, trackers ocultos, o directamente son malware disfrazado. Las que son legítimas te cobran por funciones básicas o te obligan a crear una cuenta.</p>
-        <p style="margin-bottom:16px;">OptiSuite nació de la necesidad de tener herramientas que simplemente funcionen: sin anuncios, sin trackers, sin servidores a los que conectarse, sin cuenta que crear.</p>
-        <p>Cada herramienta está construida para resolver un problema real que las alternativas del mercado resuelven mal o no resuelven sin cobrarte.</p>
+        <p style="margin-bottom:16px;">Las apps de "optimizaciÃ³n" del mercado suelen venir con publicidad invasiva, trackers ocultos, o directamente son malware disfrazado. Las que son legÃ­timas te cobran por funciones bÃ¡sicas o te obligan a crear una cuenta.</p>
+        <p style="margin-bottom:16px;">OptiSuite naciÃ³ de la necesidad de tener herramientas que simplemente funcionen: sin anuncios, sin trackers, sin servidores a los que conectarse, sin cuenta que crear.</p>
+        <p>Cada herramienta estÃ¡ construida para resolver un problema real que las alternativas del mercado resuelven mal o no resuelven sin cobrarte.</p>
 
         <div class="about-principles">
           <div class="principle">
-            <div class="principle-icon">🔓</div>
+            <div class="principle-icon">ðŸ”“</div>
             <div class="principle-text">
-              <h4>Código abierto total</h4>
-              <p>Todo el código es público. Cualquier persona puede revisar cada línea, auditar el comportamiento y contribuir.</p>
+              <h4>CÃ³digo abierto total</h4>
+              <p>Todo el cÃ³digo es pÃºblico. Cualquier persona puede revisar cada lÃ­nea, auditar el comportamiento y contribuir.</p>
             </div>
           </div>
           <div class="principle">
-            <div class="principle-icon">📦</div>
+            <div class="principle-icon">ðŸ“¦</div>
             <div class="principle-text">
               <h4>Sin instaladores complejos</h4>
-              <p>Ejecutables directos (.exe) o APKs. Descargas y usas. Sin asistentes de instalación que instalen cosas extra.</p>
+              <p>Ejecutables directos (.exe) o APKs. Descargas y usas. Sin asistentes de instalaciÃ³n que instalen cosas extra.</p>
             </div>
           </div>
           <div class="principle">
-            <div class="principle-icon">🚫</div>
+            <div class="principle-icon">ðŸš«</div>
             <div class="principle-text">
-              <h4>Sin telemetría propia</h4>
-              <p>Ninguna herramienta recopila, almacena ni envía datos del usuario a ningún servidor.</p>
+              <h4>Sin telemetrÃ­a propia</h4>
+              <p>Ninguna herramienta recopila, almacena ni envÃ­a datos del usuario a ningÃºn servidor.</p>
             </div>
           </div>
           <div class="principle">
-            <div class="principle-icon">🤖</div>
+            <div class="principle-icon">ðŸ¤–</div>
             <div class="principle-text">
               <h4>Desarrollado con IA</h4>
               <p>Claude (Anthropic) se usa como asistente de desarrollo para mayor calidad y menor cantidad de errores.</p>
@@ -933,7 +951,7 @@
               <div style="font-size:0.82rem;color:var(--text-3);">Desarrollador independiente</div>
             </div>
           </div>
-          <p style="font-size:0.875rem;margin-bottom:16px;">Construyo herramientas de optimización y seguridad con el apoyo de inteligencia artificial. Cada herramienta existe porque las alternativas tienen ads, malware o no funcionan bien.</p>
+          <p style="font-size:0.875rem;margin-bottom:16px;">Construyo herramientas de optimizaciÃ³n y seguridad con el apoyo de inteligencia artificial. Cada herramienta existe porque las alternativas tienen ads, malware o no funcionan bien.</p>
           <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 5.8c1.02 0 2.04.14 3 .4 2.28-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
             github.com/EnMaNueL-G
@@ -942,10 +960,10 @@
 
         <div class="donate-card">
           <h3>Apoyar el proyecto</h3>
-          <p>Si alguna herramienta te resultó útil. No es obligatorio — todo seguirá siendo gratuito independientemente.</p>
+          <p>Si alguna herramienta te resultÃ³ Ãºtil. No es obligatorio â€” todo seguirÃ¡ siendo gratuito independientemente.</p>
 
           <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;margin-bottom:16px;">
-            <!-- QR USDT BEP20 — generado por qrserver (sin tracking, GDPR-safe) -->
+            <!-- QR USDT BEP20 â€” generado por qrserver (sin tracking, GDPR-safe) -->
             <a href="https://bscscan.com/address/0x0a9a0d8d816ede885d1d4a5c94369a72ef86b3c1" target="_blank" rel="noopener" title="Ver en BscScan">
               <img
                 src="https://api.qrserver.com/v1/create-qr-code/?size=108x108&data=0x0a9a0d8d816ede885d1d4a5c94369a72ef86b3c1&bgcolor=ffffff&color=000000&margin=2"
@@ -960,7 +978,7 @@
               <div style="font-size:0.85rem;font-weight:600;margin-bottom:14px;color:var(--android);">BNB Smart Chain (BEP20)</div>
               <div style="font-size:0.75rem;color:var(--text-3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Token</div>
               <div style="font-size:0.85rem;font-weight:600;margin-bottom:14px;">USDT</div>
-              <div style="font-size:0.72rem;color:var(--text-3);">Escanea el QR con Binance o copia la dirección abajo</div>
+              <div style="font-size:0.72rem;color:var(--text-3);">Escanea el QR con Binance o copia la direcciÃ³n abajo</div>
             </div>
           </div>
 
@@ -972,45 +990,45 @@
             <span class="donate-label">BSC BEP20</span>
             <span class="donate-value">0x0a9a0d8d816ede885d1d4a5c94369a72ef86b3c1</span>
           </div>
-          <p style="font-size:0.75rem;margin-top:12px;color:var(--text-3);">Clic en la dirección para copiar al portapapeles.</p>
+          <p style="font-size:0.75rem;margin-top:12px;color:var(--text-3);">Clic en la direcciÃ³n para copiar al portapapeles.</p>
         </div>
       </div>
     </div>
   </div>
 </main>
 
-<!-- ══════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      PAGE: COMMUNITY
-═══════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <main id="page-community" class="page">
   <div class="container">
     <div class="platform-hero">
       <div class="section-tag">Comunidad</div>
-      <h1>Reseñas, sugerencias y soporte</h1>
-      <p>Comparte tu experiencia, reporta errores o propone mejoras. Toda la interacción es pública y verificada mediante cuenta de GitHub.</p>
+      <h1>ReseÃ±as, sugerencias y soporte</h1>
+      <p>Comparte tu experiencia, reporta errores o propone mejoras. Toda la interacciÃ³n es pÃºblica y verificada mediante cuenta de GitHub.</p>
     </div>
 
     <!-- How it works -->
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-bottom:56px;">
       <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;">
-        <div style="font-size:1.5rem;margin-bottom:10px;">✅</div>
+        <div style="font-size:1.5rem;margin-bottom:10px;">âœ…</div>
         <div style="font-weight:600;font-size:0.9rem;margin-bottom:6px;">Cuentas verificadas</div>
-        <p style="font-size:0.8rem;">Comentar requiere una cuenta de GitHub. Sin bots, sin spam, sin comentarios anónimos falsos.</p>
+        <p style="font-size:0.8rem;">Comentar requiere una cuenta de GitHub. Sin bots, sin spam, sin comentarios anÃ³nimos falsos.</p>
       </div>
       <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;">
-        <div style="font-size:1.5rem;margin-bottom:10px;">🔓</div>
+        <div style="font-size:1.5rem;margin-bottom:10px;">ðŸ”“</div>
         <div style="font-weight:600;font-size:0.9rem;margin-bottom:6px;">100% transparente</div>
-        <p style="font-size:0.8rem;">Todos los comentarios son públicos. Nada se modera ni se oculta salvo spam evidente.</p>
+        <p style="font-size:0.8rem;">Todos los comentarios son pÃºblicos. Nada se modera ni se oculta salvo spam evidente.</p>
       </div>
       <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;">
-        <div style="font-size:1.5rem;margin-bottom:10px;">🐛</div>
+        <div style="font-size:1.5rem;margin-bottom:10px;">ðŸ›</div>
         <div style="font-weight:600;font-size:0.9rem;margin-bottom:6px;">Reporta bugs</div>
-        <p style="font-size:0.8rem;">¿Encontraste un error? Descríbelo aquí o abre un Issue directamente en el repositorio de la herramienta.</p>
+        <p style="font-size:0.8rem;">Â¿Encontraste un error? DescrÃ­belo aquÃ­ o abre un Issue directamente en el repositorio de la herramienta.</p>
       </div>
       <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;">
-        <div style="font-size:1.5rem;margin-bottom:10px;">💡</div>
+        <div style="font-size:1.5rem;margin-bottom:10px;">ðŸ’¡</div>
         <div style="font-weight:600;font-size:0.9rem;margin-bottom-6px;">Sugiere mejoras</div>
-        <p style="font-size:0.8rem;">Cada sugerencia es leída. Las mejores ideas se incorporan en las próximas versiones.</p>
+        <p style="font-size:0.8rem;">Cada sugerencia es leÃ­da. Las mejores ideas se incorporan en las prÃ³ximas versiones.</p>
       </div>
     </div>
 
@@ -1025,13 +1043,13 @@
 
     <!-- Giscus comments embed -->
     <div id="giscusContainer" style="min-height:300px;">
-      <!-- Giscus se carga aquí dinámicamente -->
+      <!-- Giscus se carga aquÃ­ dinÃ¡micamente -->
       <div id="giscusPlaceholder" style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:40px;text-align:center;">
-        <div style="font-size:2rem;margin-bottom:12px;">💬</div>
+        <div style="font-size:2rem;margin-bottom:12px;">ðŸ’¬</div>
         <div style="font-weight:600;margin-bottom:8px;">Sistema de comentarios</div>
-        <p style="font-size:0.875rem;max-width:420px;margin:0 auto 20px;">Los comentarios se cargarán cuando habilites GitHub Discussions en el repositorio y configures Giscus. Ver instrucciones de activación abajo.</p>
+        <p style="font-size:0.875rem;max-width:420px;margin:0 auto 20px;">Los comentarios se cargarÃ¡n cuando habilites GitHub Discussions en el repositorio y configures Giscus. Ver instrucciones de activaciÃ³n abajo.</p>
         <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G/optisuite-web/discussions" target="_blank" rel="noopener">
-          Ver discusiones en GitHub →
+          Ver discusiones en GitHub â†’
         </a>
       </div>
     </div>
@@ -1039,37 +1057,37 @@
     <!-- Direct links to each repo discussions -->
     <div style="margin-top:48px;border-top:1px solid var(--border);padding-top:40px;">
       <div class="section-tag">Foro por herramienta</div>
-      <p style="margin-top:8px;margin-bottom:24px;font-size:0.875rem;">También puedes ir directamente a las discusiones de cada herramienta en GitHub.</p>
+      <p style="margin-top:8px;margin-bottom:24px;font-size:0.875rem;">TambiÃ©n puedes ir directamente a las discusiones de cada herramienta en GitHub.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;">
         <a class="category-card" href="https://github.com/EnMaNueL-G/WinOptimizer/discussions" target="_blank" rel="noopener" style="cursor:pointer;transition:var(--transition);">
-          <div class="cat-icon">🖥️</div>
+          <div class="cat-icon">ðŸ–¥ï¸</div>
           <div class="cat-name">WinOptimizer</div>
-          <div class="cat-count" style="color:var(--win);">Abrir discusiones →</div>
+          <div class="cat-count" style="color:var(--win);">Abrir discusiones â†’</div>
         </a>
         <a class="category-card" href="https://github.com/EnMaNueL-G/SecuritySuite/discussions" target="_blank" rel="noopener" style="cursor:pointer;">
-          <div class="cat-icon">🔒</div>
+          <div class="cat-icon">ðŸ”’</div>
           <div class="cat-name">SecuritySuite</div>
-          <div class="cat-count" style="color:var(--win);">Abrir discusiones →</div>
+          <div class="cat-count" style="color:var(--win);">Abrir discusiones â†’</div>
         </a>
         <a class="category-card" href="https://github.com/EnMaNueL-G/PhoneOptimizer/discussions" target="_blank" rel="noopener" style="cursor:pointer;">
-          <div class="cat-icon">📱</div>
+          <div class="cat-icon">ðŸ“±</div>
           <div class="cat-name">PhoneOptimizer</div>
-          <div class="cat-count" style="color:var(--android);">Abrir discusiones →</div>
+          <div class="cat-count" style="color:var(--android);">Abrir discusiones â†’</div>
         </a>
         <a class="category-card" href="https://github.com/EnMaNueL-G/BatteryGuard/discussions" target="_blank" rel="noopener" style="cursor:pointer;">
-          <div class="cat-icon">🔋</div>
+          <div class="cat-icon">ðŸ”‹</div>
           <div class="cat-name">BatteryGuard</div>
-          <div class="cat-count" style="color:var(--android);">Abrir discusiones →</div>
+          <div class="cat-count" style="color:var(--android);">Abrir discusiones â†’</div>
         </a>
         <a class="category-card" href="https://github.com/EnMaNueL-G/StorageCleaner/discussions" target="_blank" rel="noopener" style="cursor:pointer;">
-          <div class="cat-icon">💾</div>
+          <div class="cat-icon">ðŸ’¾</div>
           <div class="cat-name">StorageCleaner</div>
-          <div class="cat-count" style="color:var(--android);">Abrir discusiones →</div>
+          <div class="cat-count" style="color:var(--android);">Abrir discusiones â†’</div>
         </a>
         <a class="category-card" href="https://github.com/EnMaNueL-G/NetworkGuard/discussions" target="_blank" rel="noopener" style="cursor:pointer;">
-          <div class="cat-icon">📡</div>
+          <div class="cat-icon">ðŸ“¡</div>
           <div class="cat-name">NetworkGuard</div>
-          <div class="cat-count" style="color:var(--android);">Abrir discusiones →</div>
+          <div class="cat-count" style="color:var(--android);">Abrir discusiones â†’</div>
         </a>
       </div>
     </div>
@@ -1077,14 +1095,14 @@
   </div>
 </main>
 
-<!-- ══════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      FOOTER (universal)
-═══════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <footer>
   <div class="container">
     <div class="footer-inner">
       <div class="footer-logo">
-        <div class="logo-icon">⚡</div>
+        <div class="logo-icon">âš¡</div>
         OptiSuite
       </div>
       <div class="footer-links">
@@ -1093,7 +1111,7 @@
         <a data-page="updates" href="#updates">Changelog</a>
         <a data-page="about" href="#about">Contacto</a>
       </div>
-      <div class="footer-copy">© 2026 Enmanuel Gil — MIT License</div>
+      <div class="footer-copy">Â© 2026 Enmanuel Gil â€” MIT License</div>
     </div>
   </div>
 </footer>
@@ -1101,3 +1119,4 @@
 <script src="assets/js/main.js"></script>
 </body>
 </html>
+
