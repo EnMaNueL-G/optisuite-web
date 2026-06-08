@@ -14,6 +14,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 
+  <!-- QR code generator (pure JS, sin tracking) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+
   <!-- Favicon inline SVG -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%235B8DEF'/><text x='16' y='22' text-anchor='middle' font-size='18' fill='white'>⚡</text></svg>">
 </head>
@@ -296,7 +299,7 @@
     <div class="tools-grid" id="toolsGrid">
 
       <!-- WinOptimizer -->
-      <div class="tool-card win" data-platform="windows">
+      <div class="tool-card win" data-platform="windows" data-repo="WinOptimizer">
         <div class="card-top">
           <div class="card-title-block">
             <div class="tool-icon win">🖥️</div>
@@ -322,7 +325,7 @@
       </div>
 
       <!-- SecuritySuite -->
-      <div class="tool-card win" data-platform="windows">
+      <div class="tool-card win" data-platform="windows" data-repo="SecuritySuite">
         <div class="card-top">
           <div class="card-title-block">
             <div class="tool-icon win">🔒</div>
@@ -348,7 +351,7 @@
       </div>
 
       <!-- PhoneOptimizer -->
-      <div class="tool-card droid" data-platform="android">
+      <div class="tool-card droid" data-platform="android" data-repo="PhoneOptimizer">
         <div class="card-top">
           <div class="card-title-block">
             <div class="tool-icon droid">📱</div>
@@ -373,7 +376,7 @@
       </div>
 
       <!-- BatteryGuard -->
-      <div class="tool-card droid" data-platform="android">
+      <div class="tool-card droid" data-platform="android" data-repo="BatteryGuard">
         <div class="card-top">
           <div class="card-title-block">
             <div class="tool-icon droid">🔋</div>
@@ -398,7 +401,7 @@
       </div>
 
       <!-- StorageCleaner -->
-      <div class="tool-card droid" data-platform="android">
+      <div class="tool-card droid" data-platform="android" data-repo="StorageCleaner">
         <div class="card-top">
           <div class="card-title-block">
             <div class="tool-icon droid">💾</div>
@@ -423,7 +426,7 @@
       </div>
 
       <!-- NetworkGuard -->
-      <div class="tool-card droid" data-platform="android">
+      <div class="tool-card droid" data-platform="android" data-repo="NetworkGuard">
         <div class="card-top">
           <div class="card-title-block">
             <div class="tool-icon droid">📡</div>
@@ -899,6 +902,19 @@
         <div class="donate-card">
           <h3>Apoyar el proyecto</h3>
           <p>Si alguna herramienta te resultó útil. No es obligatorio — todo seguirá siendo gratuito independientemente.</p>
+
+          <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;margin-bottom:16px;">
+            <!-- QR code generado dinámicamente -->
+            <div id="donateQR" style="width:120px;height:120px;border-radius:10px;overflow:hidden;background:#fff;padding:6px;flex-shrink:0;" title="USDT BEP20 — escanear con Binance"></div>
+            <div style="flex:1;min-width:160px;">
+              <div style="font-size:0.75rem;color:var(--text-3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Red</div>
+              <div style="font-size:0.85rem;font-weight:600;margin-bottom:14px;color:var(--android);">BNB Smart Chain (BEP20)</div>
+              <div style="font-size:0.75rem;color:var(--text-3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Token</div>
+              <div style="font-size:0.85rem;font-weight:600;margin-bottom:14px;">USDT</div>
+              <div style="font-size:0.72rem;color:var(--text-3);">Escanea el QR con Binance o copia la dirección abajo</div>
+            </div>
+          </div>
+
           <div class="donate-method">
             <span class="donate-label">Binance Pay</span>
             <span class="donate-value">1140153333</span>
@@ -1007,22 +1023,6 @@
           <div class="cat-count" style="color:var(--android);">Abrir discusiones →</div>
         </a>
       </div>
-    </div>
-
-    <!-- Setup instructions (collapsible) -->
-    <div style="margin-top:48px;border-top:1px solid var(--border);padding-top:32px;">
-      <details style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;">
-        <summary style="cursor:pointer;font-weight:600;font-size:0.9rem;list-style:none;display:flex;align-items:center;gap:8px;">
-          <span>⚙️</span> Activar comentarios Giscus (para el administrador)
-        </summary>
-        <div style="margin-top:16px;display:flex;flex-direction:column;gap:12px;">
-          <div class="change-line"><span class="change-icon" style="color:var(--primary);font-weight:700;">1.</span><span>Ve a <a href="https://github.com/EnMaNueL-G/optisuite-web/settings" target="_blank" style="color:var(--primary);">github.com/EnMaNueL-G/optisuite-web/settings</a> → sección <strong>Features</strong> → activa <strong>Discussions</strong></span></div>
-          <div class="change-line"><span class="change-icon" style="color:var(--primary);font-weight:700;">2.</span><span>Ve a <a href="https://github.com/apps/giscus" target="_blank" style="color:var(--primary);">github.com/apps/giscus</a> → instala en los repos de OptiSuite</span></div>
-          <div class="change-line"><span class="change-icon" style="color:var(--primary);font-weight:700;">3.</span><span>Ve a <a href="https://giscus.app" target="_blank" style="color:var(--primary);">giscus.app</a> → configura con <strong>EnMaNueL-G/optisuite-web</strong> → copia el script generado</span></div>
-          <div class="change-line"><span class="change-icon" style="color:var(--primary);font-weight:700;">4.</span><span>Reemplaza el bloque <code style="background:var(--bg);padding:2px 6px;border-radius:4px;">&lt;!-- Giscus se carga aquí --&gt;</code> en index.html con el script copiado</span></div>
-          <p style="font-size:0.8rem;color:var(--text-3);margin-top:4px;">Tiempo estimado: 5 minutos. Los comentarios aparecerán en esta misma página, autenticados con GitHub.</p>
-        </div>
-      </details>
     </div>
 
   </div>

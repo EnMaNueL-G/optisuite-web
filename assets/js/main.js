@@ -254,6 +254,75 @@ triggerObserver();
 
 
 /* ══════════════════════════════════════════════════════
+   DOWNLOAD COUNTERS — real data from GitHub API
+══════════════════════════════════════════════════════ */
+async function fetchDownloadCounts() {
+  const owner = 'EnMaNueL-G';
+  const repos = ['WinOptimizer','SecuritySuite','PhoneOptimizer','BatteryGuard','StorageCleaner','NetworkGuard'];
+  let grandTotal = 0;
+
+  for (const repo of repos) {
+    try {
+      const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/releases`, {
+        headers: { 'Accept': 'application/vnd.github.v3+json' }
+      });
+      if (!res.ok) continue;
+      const releases = await res.json();
+      let total = 0;
+      releases.forEach(r => r.assets && r.assets.forEach(a => { total += a.download_count || 0; }));
+      grandTotal += total;
+
+      // Inject counter into matching tool-cards (by data-repo)
+      document.querySelectorAll(`.tool-card[data-repo="${repo}"] .card-footer`).forEach(footer => {
+        // Avoid duplicates
+        if (footer.querySelector('.dl-counter')) return;
+        const span = document.createElement('span');
+        span.className = 'dl-counter';
+        span.style.cssText = 'font-size:0.73rem;color:var(--text-3);display:flex;align-items:center;gap:4px;';
+        span.innerHTML = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>${total > 0 ? total.toLocaleString() + ' descargas' : 'Nuevo'}`;
+        // Insert before last child (usually the source link)
+        const lastChild = footer.lastElementChild;
+        if (lastChild) footer.insertBefore(span, lastChild);
+        else footer.appendChild(span);
+      });
+    } catch { /* no internet or rate limit — silently skip */ }
+  }
+
+  // Update hero stat counter
+  const totalEl = document.querySelector('[data-stat="downloads"]');
+  if (totalEl && grandTotal > 0) {
+    totalEl.textContent = grandTotal.toLocaleString();
+    totalEl.closest('.stat') && (totalEl.closest('.stat').querySelector('.stat-lbl').textContent = 'Descargas totales');
+  }
+}
+
+// Run after page loads
+window.addEventListener('load', () => {
+  fetchDownloadCounts();
+  generateDonateQR();
+});
+
+
+/* ══════════════════════════════════════════════════════
+   QR CODE — Billetera USDT BEP20
+══════════════════════════════════════════════════════ */
+function generateDonateQR() {
+  const container = document.getElementById('donateQR');
+  if (!container || typeof QRCode === 'undefined') return;
+  try {
+    new QRCode(container, {
+      text: '0x0a9a0d8d816ede885d1d4a5c94369a72ef86b3c1',
+      width:  108,
+      height: 108,
+      colorDark:  '#000000',
+      colorLight: '#ffffff',
+      correctLevel: QRCode.CorrectLevel.M
+    });
+  } catch {}
+}
+
+
+/* ══════════════════════════════════════════════════════
    COUNTER ANIMATION (hero stats)
 ══════════════════════════════════════════════════════ */
 function animateCount(el, target, duration = 1000) {
