@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="OptiSuite — Herramientas de optimización y seguridad para Windows y Android. Gratuitas, sin anuncios, código abierto.">
-  <meta property="og:title" content="OptiSuite — Herramientas libres de optimización">
+  <meta property="og:title" content="OptiSuite — Herramientas de optimización y seguridad gratuitas">
   <meta property="og:description" content="Suite de herramientas gratuitas y de código abierto para Windows y Android. Sin anuncios, sin telemetría, sin intermediarios.">
   <meta property="og:url" content="https://optisuite.app">
-  <title>OptiSuite — Herramientas de optimización y seguridad</title>
+  <title>OptiSuite — Herramientas de optimización y seguridad gratuitas</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +18,9 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%235B8DEF'/><text x='16' y='22' text-anchor='middle' font-size='18' fill='white'>⚡</text></svg>">
 </head>
 <body>
+
+<!-- Network canvas background -->
+<canvas id="networkCanvas" aria-hidden="true"></canvas>
 
 <!-- ══════════════════════════════════════════════════════
      NAVIGATION
@@ -36,6 +39,7 @@
       <a class="nav-link" data-page="windows"    href="#windows">Windows</a>
       <a class="nav-link" data-page="android"    href="#android">Android</a>
       <a class="nav-link" data-page="updates"    href="#updates">Actualizaciones</a>
+      <a class="nav-link" data-page="community"  href="#community">Comunidad</a>
       <a class="nav-link" data-page="about"      href="#about">Sobre</a>
     </div>
 
@@ -59,6 +63,7 @@
   <a class="nav-link" data-page="windows"    href="#windows">Windows</a>
   <a class="nav-link" data-page="android"    href="#android">Android</a>
   <a class="nav-link" data-page="updates"    href="#updates">Actualizaciones</a>
+  <a class="nav-link" data-page="community"  href="#community">Comunidad</a>
   <a class="nav-link" data-page="about"      href="#about">Sobre</a>
   <div style="margin-top:16px; padding-top:16px; border-top:1px solid var(--border);">
     <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G" target="_blank">GitHub ↗</a>
@@ -906,6 +911,120 @@
         </div>
       </div>
     </div>
+  </div>
+</main>
+
+<!-- ══════════════════════════════════════════════════════
+     PAGE: COMMUNITY
+═══════════════════════════════════════════════════════ -->
+<main id="page-community" class="page">
+  <div class="container">
+    <div class="platform-hero">
+      <div class="section-tag">Comunidad</div>
+      <h1>Reseñas, sugerencias y soporte</h1>
+      <p>Comparte tu experiencia, reporta errores o propone mejoras. Toda la interacción es pública y verificada mediante cuenta de GitHub.</p>
+    </div>
+
+    <!-- How it works -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-bottom:56px;">
+      <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;">
+        <div style="font-size:1.5rem;margin-bottom:10px;">✅</div>
+        <div style="font-weight:600;font-size:0.9rem;margin-bottom:6px;">Cuentas verificadas</div>
+        <p style="font-size:0.8rem;">Comentar requiere una cuenta de GitHub. Sin bots, sin spam, sin comentarios anónimos falsos.</p>
+      </div>
+      <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;">
+        <div style="font-size:1.5rem;margin-bottom:10px;">🔓</div>
+        <div style="font-weight:600;font-size:0.9rem;margin-bottom:6px;">100% transparente</div>
+        <p style="font-size:0.8rem;">Todos los comentarios son públicos. Nada se modera ni se oculta salvo spam evidente.</p>
+      </div>
+      <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;">
+        <div style="font-size:1.5rem;margin-bottom:10px;">🐛</div>
+        <div style="font-weight:600;font-size:0.9rem;margin-bottom:6px;">Reporta bugs</div>
+        <p style="font-size:0.8rem;">¿Encontraste un error? Descríbelo aquí o abre un Issue directamente en el repositorio de la herramienta.</p>
+      </div>
+      <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;">
+        <div style="font-size:1.5rem;margin-bottom:10px;">💡</div>
+        <div style="font-weight:600;font-size:0.9rem;margin-bottom-6px;">Sugiere mejoras</div>
+        <p style="font-size:0.8rem;">Cada sugerencia es leída. Las mejores ideas se incorporan en las próximas versiones.</p>
+      </div>
+    </div>
+
+    <!-- Tab selector for discussions -->
+    <div class="filter-tabs" id="communityTabs" style="margin-bottom:32px;">
+      <button class="filter-tab active" data-repo="optisuite-web" onclick="loadDiscussion('optisuite-web', this)">General</button>
+      <button class="filter-tab" data-repo="WinOptimizer"  onclick="loadDiscussion('WinOptimizer', this)">WinOptimizer</button>
+      <button class="filter-tab" data-repo="SecuritySuite" onclick="loadDiscussion('SecuritySuite', this)">SecuritySuite</button>
+      <button class="filter-tab" data-repo="PhoneOptimizer" onclick="loadDiscussion('PhoneOptimizer', this)">PhoneOptimizer</button>
+      <button class="filter-tab" data-repo="BatteryGuard"  onclick="loadDiscussion('BatteryGuard', this)">BatteryGuard</button>
+    </div>
+
+    <!-- Giscus comments embed -->
+    <div id="giscusContainer" style="min-height:300px;">
+      <!-- Giscus se carga aquí dinámicamente -->
+      <div id="giscusPlaceholder" style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:40px;text-align:center;">
+        <div style="font-size:2rem;margin-bottom:12px;">💬</div>
+        <div style="font-weight:600;margin-bottom:8px;">Sistema de comentarios</div>
+        <p style="font-size:0.875rem;max-width:420px;margin:0 auto 20px;">Los comentarios se cargarán cuando habilites GitHub Discussions en el repositorio y configures Giscus. Ver instrucciones de activación abajo.</p>
+        <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G/optisuite-web/discussions" target="_blank" rel="noopener">
+          Ver discusiones en GitHub →
+        </a>
+      </div>
+    </div>
+
+    <!-- Direct links to each repo discussions -->
+    <div style="margin-top:48px;border-top:1px solid var(--border);padding-top:40px;">
+      <div class="section-tag">Foro por herramienta</div>
+      <p style="margin-top:8px;margin-bottom:24px;font-size:0.875rem;">También puedes ir directamente a las discusiones de cada herramienta en GitHub.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;">
+        <a class="category-card" href="https://github.com/EnMaNueL-G/WinOptimizer/discussions" target="_blank" rel="noopener" style="cursor:pointer;transition:var(--transition);">
+          <div class="cat-icon">🖥️</div>
+          <div class="cat-name">WinOptimizer</div>
+          <div class="cat-count" style="color:var(--win);">Abrir discusiones →</div>
+        </a>
+        <a class="category-card" href="https://github.com/EnMaNueL-G/SecuritySuite/discussions" target="_blank" rel="noopener" style="cursor:pointer;">
+          <div class="cat-icon">🔒</div>
+          <div class="cat-name">SecuritySuite</div>
+          <div class="cat-count" style="color:var(--win);">Abrir discusiones →</div>
+        </a>
+        <a class="category-card" href="https://github.com/EnMaNueL-G/PhoneOptimizer/discussions" target="_blank" rel="noopener" style="cursor:pointer;">
+          <div class="cat-icon">📱</div>
+          <div class="cat-name">PhoneOptimizer</div>
+          <div class="cat-count" style="color:var(--android);">Abrir discusiones →</div>
+        </a>
+        <a class="category-card" href="https://github.com/EnMaNueL-G/BatteryGuard/discussions" target="_blank" rel="noopener" style="cursor:pointer;">
+          <div class="cat-icon">🔋</div>
+          <div class="cat-name">BatteryGuard</div>
+          <div class="cat-count" style="color:var(--android);">Abrir discusiones →</div>
+        </a>
+        <a class="category-card" href="https://github.com/EnMaNueL-G/StorageCleaner/discussions" target="_blank" rel="noopener" style="cursor:pointer;">
+          <div class="cat-icon">💾</div>
+          <div class="cat-name">StorageCleaner</div>
+          <div class="cat-count" style="color:var(--android);">Abrir discusiones →</div>
+        </a>
+        <a class="category-card" href="https://github.com/EnMaNueL-G/NetworkGuard/discussions" target="_blank" rel="noopener" style="cursor:pointer;">
+          <div class="cat-icon">📡</div>
+          <div class="cat-name">NetworkGuard</div>
+          <div class="cat-count" style="color:var(--android);">Abrir discusiones →</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Setup instructions (collapsible) -->
+    <div style="margin-top:48px;border-top:1px solid var(--border);padding-top:32px;">
+      <details style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;">
+        <summary style="cursor:pointer;font-weight:600;font-size:0.9rem;list-style:none;display:flex;align-items:center;gap:8px;">
+          <span>⚙️</span> Activar comentarios Giscus (para el administrador)
+        </summary>
+        <div style="margin-top:16px;display:flex;flex-direction:column;gap:12px;">
+          <div class="change-line"><span class="change-icon" style="color:var(--primary);font-weight:700;">1.</span><span>Ve a <a href="https://github.com/EnMaNueL-G/optisuite-web/settings" target="_blank" style="color:var(--primary);">github.com/EnMaNueL-G/optisuite-web/settings</a> → sección <strong>Features</strong> → activa <strong>Discussions</strong></span></div>
+          <div class="change-line"><span class="change-icon" style="color:var(--primary);font-weight:700;">2.</span><span>Ve a <a href="https://github.com/apps/giscus" target="_blank" style="color:var(--primary);">github.com/apps/giscus</a> → instala en los repos de OptiSuite</span></div>
+          <div class="change-line"><span class="change-icon" style="color:var(--primary);font-weight:700;">3.</span><span>Ve a <a href="https://giscus.app" target="_blank" style="color:var(--primary);">giscus.app</a> → configura con <strong>EnMaNueL-G/optisuite-web</strong> → copia el script generado</span></div>
+          <div class="change-line"><span class="change-icon" style="color:var(--primary);font-weight:700;">4.</span><span>Reemplaza el bloque <code style="background:var(--bg);padding:2px 6px;border-radius:4px;">&lt;!-- Giscus se carga aquí --&gt;</code> en index.html con el script copiado</span></div>
+          <p style="font-size:0.8rem;color:var(--text-3);margin-top:4px;">Tiempo estimado: 5 minutos. Los comentarios aparecerán en esta misma página, autenticados con GitHub.</p>
+        </div>
+      </details>
+    </div>
+
   </div>
 </main>
 
