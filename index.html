@@ -14,9 +14,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- QR code generator (pure JS, sin tracking) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
-
   <!-- Favicon inline SVG -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%235B8DEF'/><text x='16' y='22' text-anchor='middle' font-size='18' fill='white'>⚡</text></svg>">
 </head>
@@ -904,8 +901,16 @@
           <p>Si alguna herramienta te resultó útil. No es obligatorio — todo seguirá siendo gratuito independientemente.</p>
 
           <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;margin-bottom:16px;">
-            <!-- QR code generado dinámicamente -->
-            <div id="donateQR" style="width:120px;height:120px;border-radius:10px;overflow:hidden;background:#fff;padding:6px;flex-shrink:0;" title="USDT BEP20 — escanear con Binance"></div>
+            <!-- QR USDT BEP20 — generado por qrserver (sin tracking, GDPR-safe) -->
+            <a href="https://bscscan.com/address/0x0a9a0d8d816ede885d1d4a5c94369a72ef86b3c1" target="_blank" rel="noopener" title="Ver en BscScan">
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=108x108&data=0x0a9a0d8d816ede885d1d4a5c94369a72ef86b3c1&bgcolor=ffffff&color=000000&margin=2"
+                alt="QR USDT BEP20"
+                width="108" height="108"
+                loading="lazy"
+                style="border-radius:8px;display:block;border:3px solid #fff;"
+              >
+            </a>
             <div style="flex:1;min-width:160px;">
               <div style="font-size:0.75rem;color:var(--text-3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Red</div>
               <div style="font-size:0.85rem;font-weight:600;margin-bottom:14px;color:var(--android);">BNB Smart Chain (BEP20)</div>
