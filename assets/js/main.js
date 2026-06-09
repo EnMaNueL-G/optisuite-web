@@ -46,7 +46,7 @@
   // Colors per theme — adapts live on toggle
   const THEMES = {
     dark:  { n1:'rgba(91,141,239,',  n2:'rgba(124,92,239,', line:'rgba(91,141,239,',  la:0.22, na:0.70, op:0.35 },
-    light: { n1:'rgba(37,99,235,',   n2:'rgba(99,60,220,',  line:'rgba(37,99,235,',   la:0.10, na:0.40, op:0.18 }
+    light: { n1:'rgba(37,99,235,',   n2:'rgba(99,60,220,',  line:'rgba(37,99,235,',   la:0.18, na:0.65, op:0.32 }
   };
 
   const CONFIG = { nodeCount:55, maxDist:160, nodeRadius:1.5, speed:0.25 };
