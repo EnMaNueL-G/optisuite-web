@@ -43,18 +43,20 @@
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
 
-  const CONFIG = {
-    nodeCount:    55,
-    maxDist:      160,
-    nodeRadius:   1.5,
-    speed:        0.25,
-    nodeColor:    'rgba(91,141,239,',   // primary blue
-    lineColor:    'rgba(91,141,239,',
-    nodeColor2:   'rgba(124,92,239,',   // purple accent
+  // Colors per theme — adapts live on toggle
+  const THEMES = {
+    dark:  { n1:'rgba(91,141,239,',  n2:'rgba(124,92,239,', line:'rgba(91,141,239,',  la:0.22, na:0.70, op:0.35 },
+    light: { n1:'rgba(37,99,235,',   n2:'rgba(99,60,220,',  line:'rgba(37,99,235,',   la:0.10, na:0.40, op:0.18 }
   };
+
+  const CONFIG = { nodeCount:55, maxDist:160, nodeRadius:1.5, speed:0.25 };
 
   let W, H, nodes = [];
   let raf;
+
+  function getT() {
+    return document.documentElement.getAttribute('data-theme') === 'light' ? THEMES.light : THEMES.dark;
+  }
 
   function resize() {
     W = canvas.width  = window.innerWidth;
@@ -86,6 +88,8 @@
 
   function draw() {
     ctx.clearRect(0, 0, W, H);
+    const T = getT();
+    canvas.style.opacity = T.op;
 
     // Draw connections
     for (let i = 0; i < nodes.length; i++) {
@@ -94,11 +98,11 @@
         const dy = nodes[i].y - nodes[j].y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < CONFIG.maxDist) {
-          const alpha = (1 - dist / CONFIG.maxDist) * 0.22;
+          const alpha = (1 - dist / CONFIG.maxDist) * T.la;
           ctx.beginPath();
           ctx.moveTo(nodes[i].x, nodes[i].y);
           ctx.lineTo(nodes[j].x, nodes[j].y);
-          ctx.strokeStyle = CONFIG.lineColor + alpha + ')';
+          ctx.strokeStyle = T.line + alpha + ')';
           ctx.lineWidth = 0.8;
           ctx.stroke();
         }
@@ -108,10 +112,10 @@
     // Draw nodes
     nodes.forEach(n => {
       n.update();
-      const col = n.isPurple ? CONFIG.nodeColor2 : CONFIG.nodeColor;
+      const col = n.isPurple ? T.n2 : T.n1;
       ctx.beginPath();
       ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-      ctx.fillStyle = col + '0.7)';
+      ctx.fillStyle = col + T.na + ')';
       ctx.fill();
     });
 
