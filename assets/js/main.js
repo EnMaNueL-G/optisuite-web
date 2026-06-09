@@ -136,7 +136,7 @@ hamburger.addEventListener('click', () => {
 const pages    = document.querySelectorAll('.page');
 const navLinks = document.querySelectorAll('[data-page]');
 
-const VALID_PAGES = ['home','tools','windows','android','updates','categories','community','about'];
+const VALID_PAGES = ['home','tools','windows','android','macos','linux','updates','categories','community','about'];
 
 function navigate(pageId) {
   if (!VALID_PAGES.includes(pageId)) pageId = 'home';
@@ -331,3 +331,28 @@ const counterObserver = new IntersectionObserver(entries => {
   });
 });
 document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+
+
+/* ══════════════════════════════════════════════════════
+   DARK / LIGHT THEME TOGGLE
+══════════════════════════════════════════════════════ */
+(function initTheme() {
+  const html = document.documentElement;
+  const btn  = document.getElementById('themeToggle');
+  if (!btn) return;
+
+  // Load saved preference or default to dark
+  const saved = localStorage.getItem('os-theme') || 'dark';
+  html.setAttribute('data-theme', saved);
+  btn.innerHTML = saved === 'dark' ? '&#9790;' : '&#9728;';
+  btn.title = saved === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro';
+
+  btn.addEventListener('click', () => {
+    const current = html.getAttribute('data-theme') || 'dark';
+    const next    = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('os-theme', next);
+    btn.innerHTML = next === 'dark' ? '&#9790;' : '&#9728;';
+    btn.title = next === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro';
+  });
+})();
