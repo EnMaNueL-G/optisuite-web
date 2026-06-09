@@ -6,6 +6,35 @@
 'use strict';
 
 /* ══════════════════════════════════════════════════════
+   DARK / LIGHT THEME — init FIRST (before any render)
+══════════════════════════════════════════════════════ */
+(function initTheme() {
+  const root = document.documentElement;
+  const saved = localStorage.getItem('os-theme') || 'dark';
+  root.setAttribute('data-theme', saved);
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('themeToggle');
+    if (!btn) return;
+
+    function applyTheme(theme) {
+      root.setAttribute('data-theme', theme);
+      localStorage.setItem('os-theme', theme);
+      btn.textContent = theme === 'dark' ? '☾' : '☀';
+      btn.title = theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro';
+    }
+
+    applyTheme(saved);
+
+    btn.addEventListener('click', function () {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+    });
+  });
+})();
+
+
+/* ══════════════════════════════════════════════════════
    NETWORK CANVAS BACKGROUND
    Subtle animated particle network — dark, professional
 ══════════════════════════════════════════════════════ */
@@ -331,28 +360,3 @@ const counterObserver = new IntersectionObserver(entries => {
   });
 });
 document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
-
-
-/* ══════════════════════════════════════════════════════
-   DARK / LIGHT THEME TOGGLE
-══════════════════════════════════════════════════════ */
-(function initTheme() {
-  const html = document.documentElement;
-  const btn  = document.getElementById('themeToggle');
-  if (!btn) return;
-
-  // Load saved preference or default to dark
-  const saved = localStorage.getItem('os-theme') || 'dark';
-  html.setAttribute('data-theme', saved);
-  btn.innerHTML = saved === 'dark' ? '&#9790;' : '&#9728;';
-  btn.title = saved === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro';
-
-  btn.addEventListener('click', () => {
-    const current = html.getAttribute('data-theme') || 'dark';
-    const next    = current === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', next);
-    localStorage.setItem('os-theme', next);
-    btn.innerHTML = next === 'dark' ? '&#9790;' : '&#9728;';
-    btn.title = next === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro';
-  });
-})();
