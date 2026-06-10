@@ -169,7 +169,8 @@
   <section class="section-sm" style="border-top:1px solid var(--border);">
     <div class="container">
       <div class="section-tag">Destacadas</div>
-      <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap:16px; margin-top:20px;">
+      <p style="font-size:0.82rem; color:var(--text-3); margin-top:6px;">Toca una herramienta para ver su plataforma · desliza para ver todas.</p>
+      <div class="featured-scroll" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap:16px; margin-top:14px; align-items:start; max-height:560px; overflow-y:auto; padding-right:6px;">
 
         <div class="tool-card win fade-up fade-up-1">
           <div class="card-top">
@@ -1522,17 +1523,21 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main.js?v=3"></script>
 
-<!-- Tarjetas de app compactas: detalle desplegable al hacer clic -->
+<!-- Tarjetas de app compactas: descripción corta en el listado, detalle completo al abrir -->
 <style>
+  .tool-card.acc{cursor:pointer;}
+  /* Descripción corta visible en el listado (2 líneas); completa al abrir. */
+  .tool-card.acc > p.card-summary{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+    overflow:hidden;margin:0;}
+  .tool-card.acc.open > p.card-summary{-webkit-line-clamp:unset;overflow:visible;}
   .tool-card.acc .card-toggle{align-self:flex-start;background:none;border:none;cursor:pointer;
-    color:var(--primary,#7C3AED);font-weight:600;font-size:0.82rem;padding:4px 0 0;display:inline-flex;align-items:center;gap:6px;}
+    color:var(--primary,#7C3AED);font-weight:600;font-size:0.82rem;padding:2px 0 0;display:inline-flex;align-items:center;gap:6px;}
   .tool-card.acc .card-toggle .arr{transition:transform .18s;}
   .tool-card.acc.open .card-toggle .arr{transform:rotate(180deg);}
   .tool-card.acc .card-detail{display:none;}
-  .tool-card.acc.open .card-detail{display:flex;flex-direction:column;gap:16px;margin-top:6px;}
-  .tool-card.acc .card-top{cursor:pointer;}
+  .tool-card.acc.open .card-detail{display:flex;flex-direction:column;gap:14px;margin-top:4px;}
   #scroll-cue{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:60;
     pointer-events:none;opacity:.7;transition:opacity .3s;color:var(--primary,#7C3AED);
     display:flex;flex-direction:column;align-items:center;gap:2px;font-size:0.7rem;font-weight:600;}
@@ -1545,29 +1550,65 @@
 </div>
 <script>
   (function(){
-    // Acordeón: cada app es una pestaña compacta; al hacer clic se despliega el detalle.
-    document.querySelectorAll('.tools-grid .tool-card').forEach(function(card){
+    // ── Acordeón (solo página Herramientas): descripción corta visible; al abrir,
+    //    se muestra el detalle completo. Solo una abierta a la vez (sin huecos). ──
+    var accCards=[];
+    document.querySelectorAll('#page-tools .tool-card').forEach(function(card){
       var top=card.querySelector('.card-top');
       if(!top || card.classList.contains('acc')) return;
+      // La primera <p> es la descripción corta y queda visible en el listado.
+      var summary=card.querySelector(':scope > p');
+      if(summary) summary.classList.add('card-summary');
+      var anchor=summary || top;
       var detail=document.createElement('div');
       detail.className='card-detail';
-      var n=top.nextSibling;
+      var n=anchor.nextSibling;
       while(n){ var next=n.nextSibling; detail.appendChild(n); n=next; }
       var btn=document.createElement('button');
-      btn.className='card-toggle';
-      btn.type='button';
+      btn.className='card-toggle'; btn.type='button';
       btn.innerHTML='<span class="lbl">Ver detalles</span> <span class="arr">⌄</span>';
       card.appendChild(btn);
       card.appendChild(detail);
       card.classList.add('acc');
-      function toggle(e){ if(e) e.stopPropagation();
-        var open=card.classList.toggle('open');
-        btn.querySelector('.lbl').textContent= open ? 'Ocultar' : 'Ver detalles';
+      accCards.push(card);
+      function setOpen(open){
+        card.classList.toggle('open',open);
+        btn.querySelector('.lbl').textContent = open ? 'Ocultar' : 'Ver detalles';
+      }
+      function toggle(e){
+        if(e){ if(e.target.closest('a')) return; e.stopPropagation(); }
+        var willOpen=!card.classList.contains('open');
+        accCards.forEach(function(c){ if(c!==card) c.classList.remove('open'); }); // una sola abierta
+        accCards.forEach(function(c){ if(c!==card){ var b=c.querySelector('.card-toggle .lbl'); if(b) b.textContent='Ver detalles'; }});
+        setOpen(willOpen);
       }
       btn.addEventListener('click',toggle);
       top.addEventListener('click',toggle);
     });
-    // Indicador de scroll: se oculta al desplazar.
+
+    // ── Tarjetas destacadas + laterales (Inicio) → navegar a su plataforma ──
+    function navTo(pg){ if(typeof navigate==='function') navigate(pg); else location.hash='#'+pg; }
+    function platformOf(el){
+      if(el.classList.contains('win'))   return 'windows';
+      if(el.classList.contains('droid')) return 'android';
+      if(el.classList.contains('mac'))   return 'macos';
+      if(el.classList.contains('linux')) return 'linux';
+      return null;
+    }
+    document.querySelectorAll('#page-home .tool-card').forEach(function(card){
+      var pg=platformOf(card); if(!pg) return;
+      card.style.cursor='pointer';
+      card.addEventListener('click',function(e){ if(e.target.closest('a')) return; navTo(pg); });
+    });
+    document.querySelectorAll('#page-home .hero-card').forEach(function(card){
+      var pg = card.querySelector('.card-icon.win') ? 'windows'
+             : card.querySelector('.card-icon.droid') ? 'android' : null;
+      if(!pg) return;
+      card.style.cursor='pointer';
+      card.addEventListener('click',function(){ navTo(pg); });
+    });
+
+    // ── Indicador de scroll: se oculta al desplazar. ──
     var cue=document.getElementById('scroll-cue');
     addEventListener('scroll',function(){ if(cue) cue.style.opacity = (scrollY>140?'0':'.7'); },{passive:true});
   })();

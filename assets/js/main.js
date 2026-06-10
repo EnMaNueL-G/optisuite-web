@@ -261,7 +261,7 @@ document.querySelectorAll('.donate-value').forEach(el => {
 /* ══════════════════════════════════════════════════════
    SCROLL ANIMATIONS (IntersectionObserver)
 ══════════════════════════════════════════════════════ */
-let observer;
+var observer;  // var (hoisted) — navigate() lo usa antes de esta línea al cargar; con let daba TDZ y rompía la navegación.
 
 function triggerObserver() {
   if (observer) observer.disconnect();
@@ -292,7 +292,7 @@ triggerObserver();
    Cache en memoria para no repetir fetch en cada naveg.
 ══════════════════════════════════════════════════════ */
 const _dlCache = {};   // repo → total downloads
-let _dlFetched = false;
+var _dlFetched = false;  // var (hoisted) — navigate() lo consulta antes de esta línea al cargar.
 
 async function fetchDownloadCounts() {
   if (_dlFetched) { injectAllCounters(); return; }
