@@ -307,7 +307,7 @@
       var grid=document.getElementById('otools-grid');
       (window.OPTI_TOOLS||[]).forEach(function(t){
         var a=document.createElement('a');
-        a.className='otool'; a.href='tool.html?t='+t.id;
+        a.className='otool'; a.href='tool?t='+t.id;
         a.innerHTML=t.emoji+'<span>'+t.name+'</span>';
         grid.appendChild(a);
       });
