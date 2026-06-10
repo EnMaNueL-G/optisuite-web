@@ -585,7 +585,7 @@
             <div class="tool-icon droid app-icon"><img src="assets/img/icon-office-pro.png" alt="OptiSuite Office PRO"></div>
             <div><h3>OptiSuite Office PRO</h3><div class="version">v1.0.0</div></div>
           </div>
-          <span class="badge" style="background:#6B21A815;color:#6B21A8;border:1px solid #6B21A840;">PRO · $12.99</span>
+          <span class="badge" style="background:#6B21A815;color:#6B21A8;border:1px solid #6B21A840;">$12.99</span>
         </div>
         <p>Suite profesional de PDF y oficina para Android: 21 herramientas para editar PDF, más visor de Word (DOCX) y Excel (XLSX), OCR y firma — todo en una sola app. Pago único, sin suscripciones, sin anuncios, tuya para siempre.</p>
         <div class="features-list">
@@ -619,7 +619,7 @@
             <div class="tool-icon droid app-icon"><img src="assets/img/icon-office-proplus.png" alt="OptiSuite Office PRO+"></div>
             <div><h3>OptiSuite Office PRO+</h3><div class="version">v1.0.1</div></div>
           </div>
-          <span class="badge" style="background:#7C3AED15;color:#7C3AED;border:1px solid #7C3AED40;">PRO+ · $15.99</span>
+          <span class="badge" style="background:#7C3AED15;color:#7C3AED;border:1px solid #7C3AED40;">$15.99</span>
         </div>
         <p>La versión avanzada de OptiSuite Office, con identidad propia. Incluye todo lo de PRO y suma el editor Markdown y la creación de texto libre. Pago único, sin suscripciones, sin anuncios.</p>
         <div class="features-list">
@@ -1592,9 +1592,11 @@
     display:flex;flex-direction:column;align-items:center;gap:2px;font-size:0.7rem;font-weight:600;}
   #scroll-cue svg{animation:scueb 1.5s infinite ease-in-out;}
   @keyframes scueb{0%,100%{transform:translateY(0);}50%{transform:translateY(7px);}}
-  /* Íconos originales de las apps */
-  .tool-icon.app-icon, .card-icon.app-icon{background:none!important;padding:0;overflow:hidden;}
-  .app-icon img{width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;}
+  /* Fondo blanco en TODOS los íconos para que resalten en tema claro y oscuro. */
+  .tool-icon, .card-icon{background:#fff!important;border:1px solid rgba(0,0,0,0.08);
+    box-shadow:0 1px 3px rgba(0,0,0,0.10);overflow:hidden;}
+  .app-icon{padding:3px;}
+  .app-icon img{width:100%;height:100%;object-fit:contain;display:block;border-radius:7px;}
   /* Cajas del mismo tamaño: en Destacadas la descripción se limita a 3 líneas para que
      todas las tarjetas tengan la misma altura. */
   #page-home .featured-scroll .tool-card{height:100%;}
@@ -1604,9 +1606,10 @@
   /* Listado de Herramientas: cajas colapsadas del mismo tamaño. El título reserva 2 líneas
      (algunos nombres largos como "OptiSuite Office PRO+" envuelven) y la descripción corta 2. */
   #page-tools .tool-card h3{font-size:0.95rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  #page-tools .card-top{flex-wrap:nowrap;}
-  #page-tools .card-title-block{min-width:0;}
-  #page-tools .card-top .badge{flex-shrink:0;white-space:nowrap;}
+  #page-tools .card-top{flex-wrap:nowrap;gap:10px;align-items:flex-start;}
+  #page-tools .card-title-block{flex:1 1 auto;min-width:0;}
+  #page-tools .card-title-block > div{min-width:0;}  /* el título se trunca antes de tocar el precio */
+  #page-tools .card-top .badge{flex-shrink:0;white-space:nowrap;align-self:center;}
   #page-tools .tool-card.acc > p.card-summary{min-height:2.55em;}
 </style>
 <div id="scroll-cue" aria-hidden="true">
