@@ -148,7 +148,7 @@
             <div class="card-icon droid">📱</div>
             <div class="card-meta">
               <div class="card-name">OptiSuite PDF</div>
-              <div class="card-desc">Editor in-place · Firma · Formularios</div>
+              <div class="card-desc">Editor directo · Firma · Formularios</div>
             </div>
             <span class="card-ver">v1.5.1</span>
           </div>
@@ -218,7 +218,7 @@
             </div>
             <span class="badge badge-android">Android</span>
           </div>
-          <p>Editor PDF in-place. Toca texto, arrastra firmas, notas redimensionables, resaltado inteligente. Sin anuncios, código base público.</p>
+          <p>Editor PDF directo. Toca texto, arrastra firmas, notas redimensionables, resaltado inteligente. Sin anuncios, código base público.</p>
           <a class="download-btn droid" href="https://github.com/EnMaNueL-G/PDFSuite/releases/download/v1.5.1/OptiSuitePDF-v1.5.1.apk" target="_blank" rel="noopener">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             Descargar APK
@@ -281,38 +281,6 @@
       </div>
     </div>
   </section>
-
-  <!-- OptiSuite Office — herramientas (clic = página dedicada) -->
-  <section class="section-sm" id="office-tools" style="border-top:1px solid var(--border);">
-    <div class="container">
-      <h2 style="text-align:center; font-size:1.4rem; margin-bottom:6px;">Herramientas de OptiSuite Office</h2>
-      <p style="text-align:center; color:var(--text-muted, #777); font-size:0.9rem; margin-bottom:20px;">
-        22 herramientas — abre cada una para ver su descripción completa, funciones y especificaciones.</p>
-      <div class="otools-grid" id="otools-grid"></div>
-    </div>
-  </section>
-
-  <style>
-    .otools-grid{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
-    .otool{width:118px;display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 6px;
-      background:var(--bg-surface,#fff);border:1px solid var(--border,#e5e5e5);border-radius:14px;
-      cursor:pointer;font-size:1.4rem;color:inherit;text-decoration:none;
-      transition:transform .12s,border-color .12s,box-shadow .12s;}
-    .otool span{font-size:0.78rem;font-weight:600;text-align:center;line-height:1.2;}
-    .otool:hover{transform:translateY(-2px);border-color:#7C3AED;box-shadow:0 6px 18px rgba(124,58,237,.12);}
-  </style>
-  <script src="assets/js/tools-data.js"></script>
-  <script>
-    (function(){
-      var grid=document.getElementById('otools-grid');
-      (window.OPTI_TOOLS||[]).forEach(function(t){
-        var a=document.createElement('a');
-        a.className='otool'; a.href='tool?t='+t.id;
-        a.innerHTML=t.emoji+'<span>'+t.name+'</span>';
-        grid.appendChild(a);
-      });
-    })();
-  </script>
 
   <!-- Philosophy strip -->
   <section class="section-sm" style="background: var(--bg-surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
@@ -578,7 +546,7 @@
         </div>
         <p>Editor PDF completo para Android. Toca el texto para editarlo, arrastra firmas e imágenes sobre la página, notas redimensionables, resaltado inteligente. Sin anuncios, código base público.</p>
         <div class="features-list">
-          <div class="feature-item"><span class="feature-dot"></span>Editor in-place: texto, firma e imagen directamente sobre el PDF</div>
+          <div class="feature-item"><span class="feature-dot"></span>Editor directo: texto, firma e imagen directamente sobre el PDF</div>
           <div class="feature-item"><span class="feature-dot"></span>Notas redimensionables · resaltado detecta líneas de texto reales</div>
           <div class="feature-item"><span class="feature-dot"></span>Guardar como nuevo archivo o sobrescribir el original</div>
           <div class="feature-item"><span class="feature-dot"></span>Combinar, dividir, comprimir, rotar, formularios AcroForm</div>
@@ -605,7 +573,7 @@
         <p>Suite profesional de PDF y oficina para Android: 21 herramientas para editar PDF, más visor de Word (DOCX) y Excel (XLSX), OCR y firma — todo en una sola app. Pago único, sin suscripciones, sin anuncios, tuya para siempre.</p>
         <div class="features-list">
           <div class="feature-item"><span class="feature-dot" style="background:#6B21A8;"></span>21 herramientas PDF: rotar, comprimir, combinar, dividir, organizar páginas, contraseña, convertir y traducir</div>
-          <div class="feature-item"><span class="feature-dot" style="background:#6B21A8;"></span>Editor in-place: agregar texto, resaltar (5 colores), anotar, insertar imagen, redactar y firmar</div>
+          <div class="feature-item"><span class="feature-dot" style="background:#6B21A8;"></span>Editor directo: agregar texto, resaltar (5 colores), anotar, insertar imagen, redactar y firmar</div>
           <div class="feature-item"><span class="feature-dot" style="background:#6B21A8;"></span>Visor de Word (DOCX) y Excel (XLSX) · PDF e imágenes con zoom táctil</div>
           <div class="feature-item"><span class="feature-dot" style="background:#6B21A8;"></span>OCR — extrae texto de imágenes y PDFs escaneados · exporta a TXT/DOCX/XLSX</div>
           <div class="feature-item"><span class="feature-dot" style="background:#6B21A8;"></span>Buscar y reemplazar · imprimir · 100% local, sin internet</div>
@@ -832,9 +800,9 @@
       <div class="tool-card droid">
         <div class="card-top"><div class="card-title-block"><div class="tool-icon droid">📋</div><div><h3>OptiSuite PDF</h3><div class="version">v1.5.1 · Gratis</div></div></div>
         <span class="badge badge-android">Android</span></div>
-        <p>Editor PDF in-place. Toca texto, arrastra firmas, notas redimensionables, resaltado inteligente. Sin anuncios, código base público.</p>
+        <p>Editor PDF directo. Toca texto, arrastra firmas, notas redimensionables, resaltado inteligente. Sin anuncios, código base público.</p>
         <div class="features-list">
-          <div class="feature-item"><span class="feature-dot"></span>Editor in-place: texto, firma e imágenes sobre el PDF</div>
+          <div class="feature-item"><span class="feature-dot"></span>Editor directo: texto, firma e imágenes sobre el PDF</div>
           <div class="feature-item"><span class="feature-dot"></span>Combinar, dividir, comprimir, formularios AcroForm</div>
           <div class="feature-item"><span class="feature-dot"></span>Guardar como nuevo o sobrescribir el original</div>
         </div>
@@ -888,21 +856,41 @@
 
     <div class="updates-list">
 
+      <div class="update-item" style="border-left:3px solid #7C3AED;">
+        <div class="update-meta">
+          <span class="update-date">Junio 2026</span>
+          <span class="update-ver">v1.0.1</span>
+          <span class="update-type type-new">Nuevo</span>
+          <span class="badge" style="background:#7C3AED15;color:#7C3AED;border:1px solid #7C3AED40;width:fit-content;">PRO+ · Android</span>
+        </div>
+        <div class="update-content">
+          <h3>OptiSuite Office PRO+ v1.0.1 — Nuevo producto</h3>
+          <p>La versión avanzada de OptiSuite Office, con identidad propia. Pago único $15.99 — 7 días de prueba gratuita.</p>
+          <div class="update-changes">
+            <div class="change-line"><span class="change-icon">✨</span><span>Editor Markdown con vista previa en vivo y exportación a PDF, HTML y .md</span></div>
+            <div class="change-line"><span class="change-icon">✨</span><span>Texto libre: crea texto nuevo en cualquier punto, muévelo, ajústalo y edítalo</span></div>
+            <div class="change-line"><span class="change-icon">✨</span><span>Interfaz premium diferenciada · incluye todo lo de PRO (22 herramientas)</span></div>
+            <div class="change-line"><span class="change-icon">✨</span><span>Pago único, sin suscripciones, sin anuncios, sin telemetría · código privado</span></div>
+          </div>
+        </div>
+      </div>
+
       <div class="update-item" style="border-left:3px solid #6B21A8;">
         <div class="update-meta">
-          <span class="update-date">Jun 2026</span>
-          <span class="update-ver">v1.0.0</span>
-          <span class="update-type type-new">Nuevo</span>
+          <span class="update-date">Junio 2026</span>
+          <span class="update-ver">v1.0.1</span>
+          <span class="update-type type-new">Actualización</span>
           <span class="badge" style="background:#6B21A815;color:#6B21A8;border:1px solid #6B21A840;width:fit-content;">PRO · Android</span>
         </div>
         <div class="update-content">
-          <h3>OptiSuite Office PRO v1.0.0 — Lanzamiento</h3>
+          <h3>OptiSuite Office PRO v1.0.1</h3>
           <p>Suite profesional de PDF y oficina para Android. Pago único $12.99 — 7 días de prueba gratuita, sin suscripciones, sin anuncios.</p>
           <div class="update-changes">
-            <div class="change-line"><span class="change-icon">✨</span><span>Visor: Word (DOCX), Excel (XLSX), PDF e imágenes · 21 herramientas PDF · OCR · firma</span></div>
-            <div class="change-line"><span class="change-icon">✨</span><span>Zoom táctil pinch · sistema de licencias 7 días trial · activación por token</span></div>
-            <div class="change-line"><span class="change-icon">✨</span><span>Pago único $12.99 — sin suscripciones, sin anuncios, sin telemetría</span></div>
-            <div class="change-line"><span class="change-icon">✨</span><span>APK firmado 11.29 MB · obfuscación R8 · código PRO privado</span></div>
+            <div class="change-line"><span class="change-icon">✨</span><span>21 herramientas PDF · visor Word (DOCX)/Excel (XLSX) · OCR · firma a mano</span></div>
+            <div class="change-line"><span class="change-icon">✨</span><span>Editor de texto: edita el existente o crea texto nuevo; guarda de forma fiable en Descargas</span></div>
+            <div class="change-line"><span class="change-icon">✨</span><span>Edición sobre imágenes · botón de información en cada herramienta</span></div>
+            <div class="change-line"><span class="change-icon">✨</span><span>5 herramientas básicas gratis · resto con licencia · 100% local, sin internet</span></div>
+            <div class="change-line"><span class="change-icon">🔧</span><span>APK firmado · obfuscación R8 · código privado</span></div>
           </div>
         </div>
       </div>
@@ -1412,9 +1400,9 @@
           </div>
           <span class="badge badge-soon">Pronto</span>
         </div>
-        <p>Editor PDF in-place, firma digital, anotaciones y compresión. La misma experiencia que en Android, adaptada al escritorio de Mac.</p>
+        <p>Editor PDF directo, firma digital, anotaciones y compresión. La misma experiencia que en Android, adaptada al escritorio de Mac.</p>
         <div class="features-list">
-          <div class="feature-item"><span class="feature-dot"></span>Edición in-place sin re-exportar</div>
+          <div class="feature-item"><span class="feature-dot"></span>Edición directa sin re-exportar</div>
           <div class="feature-item"><span class="feature-dot"></span>Firma digital con trazado a mano</div>
           <div class="feature-item"><span class="feature-dot"></span>Notas, resaltado e inserción de imágenes</div>
           <div class="feature-item"><span class="feature-dot"></span>Sin iCloud obligatorio, sin cuenta Apple</div>
@@ -1470,7 +1458,7 @@
           </div>
           <span class="badge badge-soon">Pronto</span>
         </div>
-        <p>Editor PDF para Linux. Edición in-place, firmas y anotaciones. AppImage portable sin instalación.</p>
+        <p>Editor PDF para Linux. Edición directa, firmas y anotaciones. AppImage portable sin instalación.</p>
         <div class="features-list">
           <div class="feature-item"><span class="feature-dot"></span>AppImage portable — sin instalación, sin root</div>
           <div class="feature-item"><span class="feature-dot"></span>Compatible con Ubuntu, Fedora, Arch y derivados</div>
@@ -1535,6 +1523,55 @@
 </footer>
 
 <script src="assets/js/main.js"></script>
+
+<!-- Tarjetas de app compactas: detalle desplegable al hacer clic -->
+<style>
+  .tool-card.acc .card-toggle{align-self:flex-start;background:none;border:none;cursor:pointer;
+    color:var(--primary,#7C3AED);font-weight:600;font-size:0.82rem;padding:4px 0 0;display:inline-flex;align-items:center;gap:6px;}
+  .tool-card.acc .card-toggle .arr{transition:transform .18s;}
+  .tool-card.acc.open .card-toggle .arr{transform:rotate(180deg);}
+  .tool-card.acc .card-detail{display:none;}
+  .tool-card.acc.open .card-detail{display:flex;flex-direction:column;gap:16px;margin-top:6px;}
+  .tool-card.acc .card-top{cursor:pointer;}
+  #scroll-cue{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:60;
+    pointer-events:none;opacity:.7;transition:opacity .3s;color:var(--primary,#7C3AED);
+    display:flex;flex-direction:column;align-items:center;gap:2px;font-size:0.7rem;font-weight:600;}
+  #scroll-cue svg{animation:scueb 1.5s infinite ease-in-out;}
+  @keyframes scueb{0%,100%{transform:translateY(0);}50%{transform:translateY(7px);}}
+</style>
+<div id="scroll-cue" aria-hidden="true">
+  <span>Explora</span>
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<script>
+  (function(){
+    // Acordeón: cada app es una pestaña compacta; al hacer clic se despliega el detalle.
+    document.querySelectorAll('.tools-grid .tool-card').forEach(function(card){
+      var top=card.querySelector('.card-top');
+      if(!top || card.classList.contains('acc')) return;
+      var detail=document.createElement('div');
+      detail.className='card-detail';
+      var n=top.nextSibling;
+      while(n){ var next=n.nextSibling; detail.appendChild(n); n=next; }
+      var btn=document.createElement('button');
+      btn.className='card-toggle';
+      btn.type='button';
+      btn.innerHTML='<span class="lbl">Ver detalles</span> <span class="arr">⌄</span>';
+      card.appendChild(btn);
+      card.appendChild(detail);
+      card.classList.add('acc');
+      function toggle(e){ if(e) e.stopPropagation();
+        var open=card.classList.toggle('open');
+        btn.querySelector('.lbl').textContent= open ? 'Ocultar' : 'Ver detalles';
+      }
+      btn.addEventListener('click',toggle);
+      top.addEventListener('click',toggle);
+    });
+    // Indicador de scroll: se oculta al desplazar.
+    var cue=document.getElementById('scroll-cue');
+    addEventListener('scroll',function(){ if(cue) cue.style.opacity = (scrollY>140?'0':'.7'); },{passive:true});
+  })();
+</script>
 </body>
 </html>
 
