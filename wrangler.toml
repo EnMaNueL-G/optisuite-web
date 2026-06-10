@@ -1,0 +1,8 @@
+name = "optisuite-web"
+compatibility_date = "2025-01-01"
+
+# Static site served as Worker assets (no Worker script needed).
+# The Workers build runs `npx wrangler deploy`, which reads this config and
+# uploads the repo root as static assets. SPA: hash routing in index.html.
+[assets]
+directory = "."
