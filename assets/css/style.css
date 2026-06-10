@@ -341,7 +341,7 @@ p  { color: var(--text-2); line-height: 1.7; }
 .hero-visual {
   display: flex; flex-direction: column; gap: 12px;
   position: relative;
-  max-height: 64vh; overflow-y: auto; padding-right: 4px;
+  max-height: 384px; overflow-y: auto; padding-right: 6px;
 }
 .hero-visual::-webkit-scrollbar, .featured-scroll::-webkit-scrollbar { width: 6px; }
 .hero-visual::-webkit-scrollbar-thumb, .featured-scroll::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 3px; }
@@ -365,8 +365,9 @@ p  { color: var(--text-2); line-height: 1.7; }
 .card-icon.win  { background: var(--win-dim); }
 .card-icon.droid{ background: var(--android-dim); }
 .card-meta { flex: 1; }
-.card-name { font-size: 0.9rem; font-weight: 600; }
-.card-desc { font-size: 0.78rem; color: var(--text-3); margin-top: 2px; }
+.card-name { font-size: 0.9rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card-desc { font-size: 0.78rem; color: var(--text-3); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hero-card .card-meta { min-width: 0; }  /* permite el ellipsis dentro del flex */
 .card-ver { font-size: 0.72rem; color: var(--text-3); white-space: nowrap; }
 
 /* ── Section headers ─────────────────────────────────── */
