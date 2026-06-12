@@ -587,6 +587,7 @@ footer {
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .section   { padding: 60px 0; }
+  .tk-split  { grid-template-columns: 1fr !important; }
   .tools-grid { grid-template-columns: 1fr; }
   .update-item { grid-template-columns: 1fr; gap: 12px; }
   .update-meta { flex-direction: row; align-items: center; gap: 12px; }
