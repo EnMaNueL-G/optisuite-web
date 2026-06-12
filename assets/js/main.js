@@ -169,7 +169,7 @@ hamburger.addEventListener('click', () => {
 const pages    = document.querySelectorAll('.page');
 const navLinks = document.querySelectorAll('[data-page]');
 
-const VALID_PAGES = ['home','tools','windows','android','macos','linux','updates','categories','community','about','toolkit'];
+const VALID_PAGES = ['home','tools','windows','android','macos','linux','updates','categories','community','about','toolkit','office-plus'];
 
 function navigate(pageId) {
   if (!VALID_PAGES.includes(pageId)) pageId = 'home';
