@@ -870,6 +870,35 @@
         </ol>
         <p style="font-size:0.8rem;color:var(--text-3);margin:14px 0 0;">La dirección https es necesaria para el vídeo fluido en el navegador. En tu red local, el control funciona también sin túnel.</p>
       </div>
+
+      <h3 style="font-size:1.05rem;margin:26px 0 12px;">Otras opciones de servidor (elige la que prefieras)</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;">
+        <div style="border:1px solid var(--border);border-radius:12px;padding:16px;">
+          <h4 style="margin:0 0 6px;font-size:0.95rem;">🟣 ngrok</h4>
+          <p style="font-size:0.84rem;color:var(--text-3);margin:0 0 8px;">El más rápido para empezar. Cuenta gratuita.</p>
+          <code style="display:block;background:rgba(255,255,255,.04);border-radius:8px;padding:8px 10px;font-size:0.8rem;">ngrok http 8770</code>
+          <p style="font-size:0.78rem;color:var(--text-3);margin:8px 0 0;">Te da una dirección <b>https</b> lista para pegar en OptiFleet.</p>
+        </div>
+        <div style="border:1px solid var(--border);border-radius:12px;padding:16px;">
+          <h4 style="margin:0 0 6px;font-size:0.95rem;">🟠 Cloudflare Tunnel</h4>
+          <p style="font-size:0.84rem;color:var(--text-3);margin:0 0 8px;">Gratis y sin abrir puertos del router.</p>
+          <code style="display:block;background:rgba(255,255,255,.04);border-radius:8px;padding:8px 10px;font-size:0.8rem;">cloudflared tunnel --url http://localhost:8770</code>
+          <p style="font-size:0.78rem;color:var(--text-3);margin:8px 0 0;">Devuelve una dirección <b>https</b> de Cloudflare.</p>
+        </div>
+        <div style="border:1px solid var(--border);border-radius:12px;padding:16px;">
+          <h4 style="margin:0 0 6px;font-size:0.95rem;">🔵 Tailscale (VPN privada)</h4>
+          <p style="font-size:0.84rem;color:var(--text-3);margin:0 0 8px;">Lo más privado: no expone nada a Internet público.</p>
+          <code style="display:block;background:rgba(255,255,255,.04);border-radius:8px;padding:8px 10px;font-size:0.8rem;">http://100.x.x.x:8770</code>
+          <p style="font-size:0.78rem;color:var(--text-3);margin:8px 0 0;">Instala Tailscale en el PC y en tu dispositivo y entra por su IP privada.</p>
+        </div>
+        <div style="border:1px solid var(--border);border-radius:12px;padding:16px;">
+          <h4 style="margin:0 0 6px;font-size:0.95rem;">🟢 LocalTunnel</h4>
+          <p style="font-size:0.84rem;color:var(--text-3);margin:0 0 8px;">Alternativa simple y gratuita.</p>
+          <code style="display:block;background:rgba(255,255,255,.04);border-radius:8px;padding:8px 10px;font-size:0.8rem;">lt --port 8770</code>
+          <p style="font-size:0.78rem;color:var(--text-3);margin:8px 0 0;">Devuelve una dirección pública para pegar en OptiFleet.</p>
+        </div>
+      </div>
+      <p style="font-size:0.82rem;color:var(--text-3);margin:14px 0 0;">En todos los casos el paso final es el mismo: copia la dirección que te da el servicio y pégala en OptiFleet → <b>Apoyo → Dirección pública</b>. Para tu red local no necesitas nada de esto. Recomendado para Internet: una dirección <b>https</b> (ngrok/Cloudflare) o una <b>VPN privada</b> (Tailscale).</p>
     </div>
 
     <!-- PRECIO -->
