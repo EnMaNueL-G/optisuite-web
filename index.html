@@ -438,7 +438,7 @@
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             Descargar para Windows
           </a>
-          <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G/opticert" target="_blank" rel="noopener">Código →</a>
+          <a class="btn btn-ghost btn-sm" href="#opticert" onclick="navigate('opticert');return false;">Ver detalles →</a>
         </div>
       </div>
 
@@ -1035,6 +1035,68 @@
 <!-- ======================================================
      PAGE: OptiPlay (ficha de producto)
 ======================================================== -->
+<main id="page-opticert" class="page">
+  <div class="container" style="max-width:1080px;padding-top:80px;">
+    <a href="#tools" onclick="navigate('tools');return false;" style="display:inline-flex;align-items:center;gap:6px;color:var(--text-3);font-size:0.85rem;margin:8px 0 18px;text-decoration:none;">← Volver a herramientas</a>
+
+    <!-- HERO -->
+    <div style="display:flex;gap:22px;align-items:center;flex-wrap:wrap;margin-bottom:26px;">
+      <div style="width:74px;height:74px;flex:0 0 auto;border-radius:18px;background:linear-gradient(135deg,#10b981,#0ea5e9);display:grid;place-items:center;box-shadow:0 8px 24px rgba(16,185,129,.4);">
+        <svg width="40" height="40" viewBox="0 0 48 48"><path d="M24 3 L40 9 V24 C40 35 33 42 24 45 C15 42 8 35 8 24 V9 Z" fill="#fff" opacity=".25"/><path d="M15.5 24.5 l6 6 l11.5 -13.5" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div style="flex:1;min-width:260px;">
+        <h1 style="font-size:2.1rem;margin:0 0 4px;">Opti<span style="background:linear-gradient(135deg,#10b981,#0ea5e9);-webkit-background-clip:text;background-clip:text;color:transparent;">Cert</span></h1>
+        <div class="version" style="margin-bottom:10px;">v1.0.0 · Windows 10/11 · Gratis · Open source</div>
+        <p style="color:var(--text-2);font-size:1rem;max-width:640px;">Conecta un móvil y obtén en segundos un <b>certificado de confianza</b> para venderlo o comprarlo con garantía: diagnóstico completo, <b>grado A/B/C/D</b> y un <b>PDF firmado con QR de verificación</b>. Pensado para tiendas y para la compraventa entre particulares. Da seguridad al comprador y diferencia tu venta.</p>
+      </div>
+    </div>
+
+    <!-- BADGES -->
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px;">
+      <span class="badge" style="background:#10b98115;color:#10b981;border:1px solid #10b98140;">Nuevo</span>
+      <span class="badge" style="background:#3DDC8415;color:#3DDC84;border:1px solid #3DDC8440;">✓ 100% gratis</span>
+      <span class="badge" style="background:#0ea5e915;color:#0ea5e9;border:1px solid #0ea5e940;">Certificado firmado (Ed25519)</span>
+      <span class="badge" style="background:#22d3ee15;color:#22d3ee;border:1px solid #22d3ee40;">Sin anuncios ni telemetría</span>
+    </div>
+
+    <!-- CTA -->
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px;">
+      <a class="btn btn-primary" href="https://github.com/EnMaNueL-G/opticert/releases/latest/download/OptiCert-Portable-v1.0.0.zip" rel="noopener" style="background:linear-gradient(135deg,#10b981,#0ea5e9);color:#fff;">Descargar para Windows</a>
+      <a class="btn btn-ghost" href="https://github.com/EnMaNueL-G/opticert" target="_blank" rel="noopener">Ver código (GitHub)</a>
+      <a class="btn btn-ghost" href="#tools" onclick="navigate('tools');return false;">Ver otras herramientas</a>
+    </div>
+    <p style="color:var(--text-3);font-size:0.82rem;margin:-22px 0 30px;">Portable: descomprime y abre <b>OptiCert.exe</b>. <b>Incluye ADB</b> — no necesitas instalar nada más.</p>
+
+    <!-- CAPTURA PRINCIPAL -->
+    <div style="border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4);margin-bottom:12px;">
+      <img src="assets/img/shot-opticert-panel.png?v=1" alt="Panel de diagnóstico de OptiCert" style="width:100%;display:block;">
+    </div>
+    <p style="color:var(--text-3);font-size:0.85rem;text-align:center;margin-bottom:40px;">Diagnóstico en vivo: salud de batería, temperatura y ciclos en medidores, con grado y semáforo "listo para vender".</p>
+
+    <!-- FUNCIONES -->
+    <h2 style="font-size:1.4rem;margin:0 0 18px;">Qué incluye</h2>
+    <div class="features-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-bottom:40px;">
+      <div style="border:1px solid var(--border);border-radius:12px;padding:16px;"><h3 style="font-size:0.98rem;margin:0 0 6px;">🔋 Salud real de batería</h3><p style="font-size:0.85rem;color:var(--text-3);margin:0;">Capacidad, ciclos, temperatura y % de salud. Grado A/B/C/D objetivo.</p></div>
+      <div style="border:1px solid var(--border);border-radius:12px;padding:16px;"><h3 style="font-size:0.98rem;margin:0 0 6px;">🛡️ IMEI y FRP/iCloud</h3><p style="font-size:0.85rem;color:var(--text-3);margin:0;">Validez del IMEI (Luhn), blacklist (robo) y aviso de cuenta vinculada.</p></div>
+      <div style="border:1px solid var(--border);border-radius:12px;padding:16px;"><h3 style="font-size:0.98rem;margin:0 0 6px;">🧪 Pruebas funcionales</h3><p style="font-size:0.85rem;color:var(--text-3);margin:0;">Cámara en vivo, botones que se marcan al pulsarlos, WiFi/BT en gráfico y test térmico.</p></div>
+      <div style="border:1px solid var(--border);border-radius:12px;padding:16px;"><h3 style="font-size:0.98rem;margin:0 0 6px;">📜 Certificado firmado</h3><p style="font-size:0.85rem;color:var(--text-3);margin:0;">PDF con tu marca, QR de verificación y firma Ed25519 antifalsificable.</p></div>
+      <div style="border:1px solid var(--border);border-radius:12px;padding:16px;"><h3 style="font-size:0.98rem;margin:0 0 6px;">🏷️ Export a marketplaces</h3><p style="font-size:0.85rem;color:var(--text-3);margin:0;">Genera el anuncio (título, descripción, precio y CSV) para Wallapop, Back Market, eBay.</p></div>
+      <div style="border:1px solid var(--border);border-radius:12px;padding:16px;"><h3 style="font-size:0.98rem;margin:0 0 6px;">🔒 100% local</h3><p style="font-size:0.85rem;color:var(--text-3);margin:0;">Solo datos del propio equipo. Sin telemetría. Tus datos no salen de tu PC.</p></div>
+    </div>
+
+    <!-- CAPTURA CERTIFICADO -->
+    <h2 style="font-size:1.4rem;margin:0 0 8px;">El certificado que entrega</h2>
+    <p style="color:var(--text-3);font-size:0.9rem;margin:0 0 16px;max-width:640px;">Un documento profesional que el comprador puede <b>verificar por QR</b>. Más confianza, mejor precio y menos disputas.</p>
+    <div style="border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4);margin-bottom:34px;max-width:560px;">
+      <img src="assets/img/shot-opticert-cert.png?v=1" alt="Certificado OptiCert de ejemplo" style="width:100%;display:block;background:#fff;">
+    </div>
+
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px;">
+      <a class="btn btn-primary" href="https://github.com/EnMaNueL-G/opticert/releases/latest/download/OptiCert-Portable-v1.0.0.zip" rel="noopener" style="background:linear-gradient(135deg,#10b981,#0ea5e9);color:#fff;">Descargar gratis para Windows</a>
+    </div>
+  </div>
+</main>
+
 <main id="page-optiplay" class="page">
   <div class="container" style="max-width:1080px;padding-top:80px;">
     <a href="#tools" onclick="navigate('tools');return false;" style="display:inline-flex;align-items:center;gap:6px;color:var(--text-3);font-size:0.85rem;margin:8px 0 18px;text-decoration:none;">← Volver a herramientas</a>
