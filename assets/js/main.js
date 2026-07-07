@@ -169,7 +169,7 @@ hamburger.addEventListener('click', () => {
 const pages    = document.querySelectorAll('.page');
 const navLinks = document.querySelectorAll('[data-page]');
 
-const VALID_PAGES = ['home','tools','windows','android','macos','linux','updates','categories','community','about','toolkit','office-plus','optifleet','optiplay','opticert','optigrab','optidocs','neuralmix','optigsm','optigsm2'];
+const VALID_PAGES = ['home','tools','windows','android','macos','linux','updates','categories','community','about','toolkit','office-plus','optifleet','optiplay','opticert','optigrab','optidocs','neuralmix','optigsm','optigsm2','optireply','optishield'];
 
 function navigate(pageId) {
   if (!VALID_PAGES.includes(pageId)) pageId = 'home';
@@ -203,7 +203,20 @@ initPage();
 ══════════════════════════════════════════════════════ */
 function initFilters() {
   const tabs  = document.querySelectorAll('.filter-tab[data-filter]');
-  const cards = document.querySelectorAll('.tool-card[data-platform]');
+  const cards = document.querySelectorAll('#page-tools .tool-card[data-platform]');
+
+  // Contadores dinámicos (nunca se quedan obsoletos)
+  const total = cards.length;
+  const win   = [...cards].filter(c => c.dataset.platform === 'windows').length;
+  const andr  = [...cards].filter(c => c.dataset.platform === 'android').length;
+  const LABEL = { all: 'Todas', windows: 'Windows', android: 'Android' };
+  const NUM   = { all: total, windows: win, android: andr };
+  tabs.forEach(tab => {
+    const f = tab.dataset.filter;
+    if (LABEL[f] !== undefined) tab.textContent = LABEL[f] + ' (' + NUM[f] + ')';
+  });
+  const cnt = document.getElementById('toolsCount');
+  if (cnt) cnt.textContent = total;
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
