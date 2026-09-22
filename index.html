@@ -121,7 +121,7 @@
           </div>
           <div class="hero-stats">
             <div class="stat">
-              <span class="stat-num" data-count="23">23</span>
+              <span class="stat-num" data-count="24">24</span>
               <span class="stat-lbl">Herramientas</span>
             </div>
             <div class="stat">
@@ -208,6 +208,25 @@
       <div class="section-tag">Destacadas</div>
       <p style="font-size:0.82rem; color:var(--text-3); margin-top:6px;">Toca una herramienta para ver su plataforma · desliza para ver todas.</p>
       <div class="featured-scroll" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap:16px; margin-top:14px; align-items:stretch; max-height:560px; overflow-y:auto; padding-right:6px;">
+
+        <div class="tool-card win fade-up fade-up-1" style="border-color:#1877f230;">
+          <div class="card-top">
+            <div class="card-title-block">
+              <div class="tool-icon win app-icon"><img src="assets/img/icon-fotos-marketplace.png" alt="Fotos Marketplace"></div>
+              <div>
+                <h3>Fotos Marketplace</h3>
+                <div class="version">v1.1.1 · Chrome · Gratis</div>
+              </div>
+            </div>
+            <span class="badge" style="background:#1877f215;color:#1877f2;border:1px solid #1877f240;">Nuevo</span>
+          </div>
+          <p>Descarga <b>todas las fotos</b> de un anuncio de Facebook Marketplace a una carpeta con su título, y <b>limpia los metadatos</b> (EXIF/GPS) de cada foto. 100% local.</p>
+          <a class="download-btn win" href="https://github.com/EnMaNueL-G/fotos-marketplace/releases/latest/download/FotosMarketplace-v1.1.1.zip" target="_blank" rel="noopener" style="background:linear-gradient(135deg,#1877f2,#22d3ee);color:#04121f;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Descargar ZIP
+          </a>
+          <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G/fotos-marketplace" target="_blank" rel="noopener" style="margin-top:8px;">Código fuente →</a>
+        </div>
 
         <div class="tool-card android fade-up fade-up-1" style="border-color:#0EA5A530;">
           <div class="card-top">
@@ -460,17 +479,17 @@
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; flex-wrap:wrap; gap:12px;">
         <div>
           <div class="section-tag">Última actualización</div>
-          <h2 style="margin-top:6px;">OptiRec v1.0.2</h2>
+          <h2 style="margin-top:6px;">Fotos Marketplace v1.1.1</h2>
         </div>
         <a class="btn btn-ghost btn-sm" data-page="updates" href="#updates">Ver todas →</a>
       </div>
       <div style="background:var(--bg-surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:24px;">
         <div style="display:flex; gap:12px; align-items:center; margin-bottom:16px;">
-          <span class="badge" style="background:#0EA5A515;color:#0EA5A5;border:1px solid #0EA5A540;">Android</span>
+          <span class="badge" style="background:#1877f215;color:#1877f2;border:1px solid #1877f240;">Chrome</span>
           <span class="update-type type-new">Nuevo · Gratis</span>
           <span class="update-date">Septiembre 2026</span>
         </div>
-        <p style="font-size:0.875rem;">v1.0.2 — Nuevo <strong>OptiRec</strong>: grabadora que <strong>sigue grabando con la pantalla apagada</strong> (o al salir de la app). Vídeo + audio o <strong>solo audio</strong>, atajo de <strong>doble Vol +</strong> con vibración, guardado en la Galería y enfoque <strong>anti-recalentamiento</strong> (720p/24fps, encoder por hardware, vigilante térmico). 100% local y privada. <a href="https://github.com/EnMaNueL-G/optirec" target="_blank" rel="noopener" style="color:var(--accent);">Código fuente →</a></p>
+        <p style="font-size:0.875rem;">v1.1.1 — Nueva <strong>Fotos Marketplace</strong>: extensión de Chrome que descarga <strong>todas las fotos</strong> de un anuncio de Facebook Marketplace a una carpeta con su título, y <strong>limpia los metadatos</strong> (EXIF, GPS/ubicación, cámara, fecha, ICC) de cada foto para que no compartas datos ocultos. Guarda también el precio en un info.txt. 100% local. <a href="https://github.com/EnMaNueL-G/fotos-marketplace" target="_blank" rel="noopener" style="color:var(--accent);">Código fuente →</a></p>
       </div>
     </div>
   </section>
@@ -485,12 +504,12 @@
     <div class="platform-hero">
       <div class="section-tag">Todas las herramientas</div>
       <h1>Herramientas disponibles</h1>
-      <p><span id="toolsCount">23</span> herramientas para Windows y Android. Sin anuncios ni telemetría.</p>
+      <p><span id="toolsCount">24</span> herramientas para Windows y Android. Sin anuncios ni telemetría.</p>
     </div>
 
     <div class="filter-tabs">
-      <button class="filter-tab active" data-filter="all">Todas (23)</button>
-      <button class="filter-tab" data-filter="windows">Windows (13)</button>
+      <button class="filter-tab active" data-filter="all">Todas (24)</button>
+      <button class="filter-tab" data-filter="windows">Windows (14)</button>
       <button class="filter-tab" data-filter="android">Android (10)</button>
     </div>
 
@@ -864,6 +883,31 @@
             Descargar APK
           </a>
           <a class="btn btn-ghost btn-sm" href="#optiplay" onclick="navigate('optiplay');return false;">Ver detalles →</a>
+        </div>
+      </div>
+
+      <!-- Fotos Marketplace -->
+      <div class="tool-card win" data-platform="windows" data-repo="fotos-marketplace" style="border-color:#1877f233;">
+        <div class="card-top">
+          <div class="card-title-block">
+            <div class="tool-icon win app-icon"><img src="assets/img/icon-fotos-marketplace.png" alt="Fotos Marketplace"></div>
+            <div><h3>Fotos Marketplace</h3><div class="version">v1.1.1 · Chrome · Gratis</div></div>
+          </div>
+          <span class="badge" style="background:#1877f215;color:#1877f2;border:1px solid #1877f240;">Nuevo</span>
+        </div>
+        <p>Extensión de Chrome que descarga <b>todas las fotos</b> de un anuncio de Facebook Marketplace a una carpeta con su título, <b>limpiando los metadatos</b> (EXIF, GPS, cámara, fecha) de cada imagen.</p>
+        <div class="features-list">
+          <div class="feature-item"><span class="feature-dot" style="background:#1877f2;"></span>Baja todas las fotos del anuncio de una sola vez</div>
+          <div class="feature-item"><span class="feature-dot" style="background:#1877f2;"></span>Limpia EXIF/GPS/ICC de cada foto (no compartes datos ocultos)</div>
+          <div class="feature-item"><span class="feature-dot" style="background:#1877f2;"></span>Carpeta con el título + id del anuncio, e info.txt con el precio</div>
+          <div class="feature-item"><span class="feature-dot" style="background:#1877f2;"></span>100% local · usa tu sesión de Chrome · sin telemetría</div>
+        </div>
+        <div class="card-footer">
+          <a class="download-btn win" href="https://github.com/EnMaNueL-G/fotos-marketplace/releases/latest/download/FotosMarketplace-v1.1.1.zip" target="_blank" rel="noopener" style="background:linear-gradient(135deg,#1877f2,#22d3ee);color:#04121f;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Descargar ZIP
+          </a>
+          <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G/fotos-marketplace" target="_blank" rel="noopener">Código fuente</a>
         </div>
       </div>
 
