@@ -225,7 +225,7 @@
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             Descargar ZIP
           </a>
-          <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G/fotos-marketplace" target="_blank" rel="noopener" style="margin-top:8px;">Código fuente →</a>
+          <a class="btn btn-ghost btn-sm" href="#fotos-marketplace" onclick="navigate('fotos-marketplace');return false;" style="margin-top:8px;">Ver detalles →</a>
         </div>
 
         <div class="tool-card android fade-up fade-up-1" style="border-color:#0EA5A530;">
@@ -907,7 +907,7 @@
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             Descargar ZIP
           </a>
-          <a class="btn btn-ghost btn-sm" href="https://github.com/EnMaNueL-G/fotos-marketplace" target="_blank" rel="noopener">Código fuente</a>
+          <a class="btn btn-ghost btn-sm" href="#fotos-marketplace" onclick="navigate('fotos-marketplace');return false;">Ver detalles →</a>
         </div>
       </div>
 
@@ -2501,6 +2501,84 @@
 </main>
 
 <!-- ======================================================
+     PAGE: Fotos Marketplace (ficha)
+======================================================== -->
+<main id="page-fotos-marketplace" class="page">
+  <div class="container" style="max-width:1080px;padding-top:80px;">
+    <a href="#tools" onclick="navigate('tools');return false;" style="display:inline-flex;align-items:center;gap:6px;color:var(--text-3);font-size:0.85rem;margin:8px 0 18px;text-decoration:none;">← Volver a herramientas</a>
+
+    <!-- HERO -->
+    <div style="display:flex;gap:22px;align-items:center;flex-wrap:wrap;margin-bottom:26px;">
+      <div class="tool-icon win app-icon" style="width:74px;height:74px;flex:0 0 auto;"><img src="assets/img/icon-fotos-marketplace.png" alt="Fotos Marketplace"></div>
+      <div style="flex:1;min-width:260px;">
+        <h1 style="font-size:2.1rem;margin:0 0 4px;">Fotos <span style="background:linear-gradient(135deg,#1877f2,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent;">Marketplace</span></h1>
+        <div class="version" style="margin-bottom:10px;">v1.1.1 · Extensión de Chrome · 100% gratis</div>
+        <p style="color:var(--text-2);font-size:1rem;max-width:620px;">Descarga <b>todas las fotos</b> de un anuncio de Facebook Marketplace a una carpeta con su título, y <b>limpia los metadatos</b> (EXIF, GPS/ubicación, cámara, fecha, ICC) de cada foto para que no compartas datos ocultos. Todo en tu equipo, con tu sesión de Chrome.</p>
+      </div>
+    </div>
+
+    <!-- BADGES -->
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px;">
+      <span class="badge" style="background:#1877f215;color:#1877f2;border:1px solid #1877f240;">Nuevo</span>
+      <span class="badge" style="background:#22d3ee15;color:#22d3ee;border:1px solid #22d3ee40;">✓ 100% gratis</span>
+      <span class="badge" style="background:#1877f215;color:#1877f2;border:1px solid #1877f240;">Limpia metadatos (EXIF/GPS)</span>
+      <span class="badge" style="background:#22d3ee15;color:#22d3ee;border:1px solid #22d3ee40;">100% local</span>
+    </div>
+
+    <!-- CTA -->
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px;">
+      <a class="btn btn-primary" href="https://github.com/EnMaNueL-G/fotos-marketplace/releases/latest/download/FotosMarketplace-v1.1.1.zip" target="_blank" rel="noopener" style="background:linear-gradient(135deg,#1877f2,#22d3ee);color:#04121f;">Descargar ZIP</a>
+      <a class="btn btn-ghost" href="https://github.com/EnMaNueL-G/fotos-marketplace" target="_blank" rel="noopener">Código fuente</a>
+      <a class="btn btn-ghost" href="#tools" onclick="navigate('tools');return false;">Ver otras herramientas</a>
+    </div>
+
+    <!-- CAPACIDADES -->
+    <div class="section-tag" style="margin-bottom:14px;">Qué incluye</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:44px;">
+      <div style="border:1px solid var(--border);border-radius:12px;padding:16px;"><h3 style="font-size:0.98rem;margin:0 0 6px;">🖼️ Todas las fotos</h3><p style="font-size:0.85rem;color:var(--text-3);margin:0;">Recorre el visor del anuncio automáticamente y baja todas las fotos de una sola vez, sin ir una por una.</p></div>
+      <div style="border:1px solid var(--border);border-radius:12px;padding:16px;"><h3 style="font-size:0.98rem;margin:0 0 6px;">🧹 Sin metadatos</h3><p style="font-size:0.85rem;color:var(--text-3);margin:0;">Elimina EXIF, <b>GPS/ubicación</b>, modelo de cámara, fecha, XMP, IPTC y perfil de color. La imagen se re-genera desde los píxeles: no queda ningún dato oculto.</p></div>
+      <div style="border:1px solid var(--border);border-radius:12px;padding:16px;"><h3 style="font-size:0.98rem;margin:0 0 6px;">📁 Ordenado por anuncio</h3><p style="font-size:0.85rem;color:var(--text-3);margin:0;">Guarda en <code>Descargas/FotosMarketplace/&lt;título&gt; (&lt;id&gt;)/</code> con foto_01, foto_02… El id evita que dos anuncios con el mismo título se mezclen.</p></div>
+      <div style="border:1px solid var(--border);border-radius:12px;padding:16px;"><h3 style="font-size:0.98rem;margin:0 0 6px;">🧾 Precio incluido</h3><p style="font-size:0.85rem;color:var(--text-3);margin:0;">Añade un <code>info.txt</code> con el título, el <b>precio</b>, el enlace y cuántas fotos se limpiaron.</p></div>
+      <div style="border:1px solid var(--border);border-radius:12px;padding:16px;"><h3 style="font-size:0.98rem;margin:0 0 6px;">🛡️ Respaldo seguro</h3><p style="font-size:0.85rem;color:var(--text-3);margin:0;">Si una foto no se pudiera procesar, se guarda el original marcado <code>_SIN-LIMPIAR</code> para que nunca pase inadvertido.</p></div>
+      <div style="border:1px solid var(--border);border-radius:12px;padding:16px;"><h3 style="font-size:0.98rem;margin:0 0 6px;">🔒 100% local</h3><p style="font-size:0.85rem;color:var(--text-3);margin:0;">Usa tu propia sesión de Chrome; no hay servidor ni telemetría. Nada de lo tuyo sale del equipo.</p></div>
+    </div>
+
+    <!-- COMO INSTALAR -->
+    <div class="section-tag" style="margin-bottom:14px;">Cómo instalar</div>
+    <div style="border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:20px;">
+      <ol style="margin:0;padding-left:20px;color:var(--text-2);font-size:0.9rem;line-height:1.7;">
+        <li>Descarga el <b>ZIP</b> y descomprímelo.</li>
+        <li>En Chrome ve a <code>chrome://extensions</code>.</li>
+        <li>Activa el <b>"Modo de desarrollador"</b> (arriba a la derecha).</li>
+        <li>Pulsa <b>"Cargar descomprimida"</b> y elige la carpeta.</li>
+        <li>Abre un anuncio de Marketplace y pulsa el icono → <b>Descargar fotos</b>.</li>
+      </ol>
+    </div>
+
+    <!-- COMO LIMPIA -->
+    <div style="border:1px solid #1877f233;border-radius:16px;padding:24px;margin-bottom:44px;background:#1877f20a;">
+      <div class="section-tag" style="margin-bottom:10px;">Cómo limpia los metadatos</div>
+      <h2 style="font-size:1.35rem;margin:0 0 10px;">Se re-genera la imagen, no se “edita”</h2>
+      <p style="color:var(--text-2);font-size:0.92rem;margin:0;">Cada foto se decodifica y se vuelve a dibujar conservando solo los píxeles, se re-exporta y se le retiran los segmentos de metadatos (EXIF/XMP/ICC/IPTC). Verificado sobre descargas reales: <b>0 etiquetas EXIF</b> y sin GPS ni perfil de color en el archivo final.</p>
+    </div>
+
+    <!-- PRECIO -->
+    <div class="section-tag" style="margin-bottom:14px;">Precio</div>
+    <div style="border:1px solid #1877f255;border-radius:16px;padding:26px;margin-bottom:40px;background:#1877f20a;text-align:center;">
+      <div style="font-size:2rem;font-weight:800;color:#1877f2;margin-bottom:4px;">Gratis</div>
+      <p style="color:var(--text-3);font-size:0.88rem;margin:0;">100% gratuita y de código abierto. Para siempre.</p>
+    </div>
+
+    <!-- CTA FINAL -->
+    <div style="text-align:center;border:1px solid var(--border);border-radius:16px;padding:30px 20px;margin-bottom:30px;background:linear-gradient(135deg,#1877f20a,#22d3ee0a);">
+      <h2 style="font-size:1.4rem;margin:0 0 8px;">Tus fotos de Marketplace, ordenadas y limpias</h2>
+      <p style="color:var(--text-3);font-size:0.88rem;margin:0 0 18px;">Sin datos ocultos, con el precio, en segundos.</p>
+      <a class="btn btn-primary" href="https://github.com/EnMaNueL-G/fotos-marketplace/releases/latest/download/FotosMarketplace-v1.1.1.zip" target="_blank" rel="noopener" style="background:linear-gradient(135deg,#1877f2,#22d3ee);color:#04121f;">Descargar ZIP</a>
+    </div>
+  </div>
+</main>
+
+<!-- ======================================================
      PAGE: OptiSuite Office PRO+ (ficha de producto)
 ======================================================== -->
 <main id="page-office-plus" class="page">
@@ -3559,7 +3637,7 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=14"></script>
+<script src="assets/js/main.js?v=15"></script>
 <script src="assets/js/i18n.js?v=3"></script>
 
 <!-- Tarjetas de app compactas: descripción corta en el listado, detalle completo al abrir -->
